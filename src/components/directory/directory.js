@@ -22,11 +22,13 @@ const sectionArray = [
   {
     title: 'Placeholder',
     imageUrl: 'https://source.unsplash.com/random/900×700/?mango',
+    size: 'large',
     id: 4
   },
   {
     title: 'Placeholder',
     imageUrl: 'https://source.unsplash.com/random/900×700/?plum',
+    size: 'large',
     id: 5
   }
 ];
