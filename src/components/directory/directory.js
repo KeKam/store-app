@@ -7,29 +7,34 @@ const sectionArray = [
   {
     title: 'Placeholder',
     imageUrl: 'https://source.unsplash.com/random/900×700/?kiwi',
-    id: 1
+    id: 1,
+    linkUrl: ''
   },
   {
     title: 'Placeholder',
     imageUrl: 'https://source.unsplash.com/random/900×700/?pear',
-    id: 2
+    id: 2,
+    linkUrl: ''
   },
   {
     title: 'Placeholder',
     imageUrl: 'https://source.unsplash.com/random/900×700/?banana',
-    id: 3
+    id: 3,
+    linkUrl: ''
   },
   {
     title: 'Placeholder',
     imageUrl: 'https://source.unsplash.com/random/900×700/?mango',
     size: 'large',
-    id: 4
+    id: 4,
+    linkUrl: ''
   },
   {
     title: 'Placeholder',
     imageUrl: 'https://source.unsplash.com/random/900×700/?plum',
     size: 'large',
-    id: 5
+    id: 5,
+    linkUrl: ''
   }
 ];
 
@@ -38,10 +43,8 @@ const Directory = () => {
 
   return (
     <S.Container>
-      {sections.map(({ id, title, imageUrl, size }) => {
-        return (
-          <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
-        );
+      {sections.map(({ id, ...sectionProps }) => {
+        return <MenuItem key={id} {...sectionProps} />;
       })}
     </S.Container>
   );
