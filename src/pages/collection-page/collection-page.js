@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-import { SHOP_DATA } from './shop.data';
+import { COLLECTION_DATA } from './collection.data';
 import CollectionPreview from './../../components/collection-preview/collection-preview';
 
-const ShopPage = () => {
-  const [collections, setCollections] = useState(SHOP_DATA);
+const CollectionPage = () => {
+  const [collections, setCollections] = useState(COLLECTION_DATA);
 
   return (
     <div>
@@ -15,4 +15,4 @@ const ShopPage = () => {
   );
 };
 
-export default ShopPage;
+export default CollectionPage;

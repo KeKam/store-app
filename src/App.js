@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from './pages/homepage/homepage';
-import ShopPage from './pages/shop-page/shop-page';
+import CollectionPage from './pages/collection-page/collection-page';
 import Header from './components/header/header';
 import { GlobalStyle } from './components/global-styles/global-style';
 
@@ -13,7 +13,7 @@ const App = () => {
       <Header />
       <Switch>
         <Route exact path='/' component={HomePage} />
-        <Route exact path='/shop' component={ShopPage} />
+        <Route exact path='/collection' component={CollectionPage} />
       </Switch>
     </div>
   );

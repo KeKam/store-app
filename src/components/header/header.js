@@ -7,7 +7,7 @@ const Header = () => {
     <S.Container>
       <S.Logo to='/'>Placeholder</S.Logo>
       <S.Options>
-        <S.Option to='/shop'>SHOP</S.Option>
+        <S.Option to='/collection'>COLLECTION</S.Option>
         <S.Option to='/contact'>CONTACT</S.Option>
       </S.Options>
     </S.Container>
