@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import FormInput from '../form-input/form-input';
+import Button from '../button/button';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -45,7 +46,7 @@ const SignIn = () => {
           required
         />
 
-        <input type='submit' value='Submit' />
+        <Button type='submit'> Sign in </Button>
       </form>
     </div>
   );
