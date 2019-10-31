@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import FormInput from '../form-input/form-input';
 import Button from '../button/button';
+import { SignIn as S } from './sign-in.styled';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -24,8 +25,8 @@ const SignIn = () => {
   };
 
   return (
-    <div>
-      <h2>I already have an account</h2>
+    <S.Container>
+      <S.Title>I already have an account</S.Title>
       <span>Sign in with your email and password</span>
 
       <form onSubmit={onSubmit}>
@@ -48,7 +49,7 @@ const SignIn = () => {
 
         <Button type='submit'> Sign in </Button>
       </form>
-    </div>
+    </S.Container>
   );
 };
 
