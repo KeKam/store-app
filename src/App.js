@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import HomePage from './pages/homepage/homepage';
 import CollectionPage from './pages/collection-page/collection-page';
+import LoginPage from './pages/login-page/login-page';
 import Header from './components/header/header';
 import { GlobalStyle } from './components/global-styles/global-style';
 
@@ -13,7 +14,8 @@ const App = () => {
       <Header />
       <Switch>
         <Route exact path='/' component={HomePage} />
-        <Route exact path='/collection' component={CollectionPage} />
+        <Route path='/collection' component={CollectionPage} />
+        <Route path='/login' component={LoginPage} />
       </Switch>
     </div>
   );
