@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import FormInput from '../form-input/form-input';
+
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -26,22 +28,23 @@ const SignIn = () => {
       <span>Sign in with your email and password</span>
 
       <form onSubmit={onSubmit}>
-        <label>Email</label>
-        <input
+        <FormInput
           name='email'
           type='email'
           value={email}
           onChange={onEmailChange}
+          label='email'
           required
         />
-        <input
+        <FormInput
           name='password'
           type='password'
           value={password}
           onChange={onPasswordChange}
+          label='password'
           required
         />
-        <label>Password</label>
+
         <input type='submit' value='Submit' />
       </form>
     </div>
