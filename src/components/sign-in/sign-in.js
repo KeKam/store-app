@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import FormInput from '../form-input/form-input';
 import Button from '../button/button';
+import { signInWithGoogle } from '../../firebase/firebase';
 import { SignIn as S } from './sign-in.styled';
 
 const SignIn = () => {
@@ -48,6 +49,7 @@ const SignIn = () => {
         />
 
         <Button type='submit'> Sign in </Button>
+        <Button onClick={signInWithGoogle} isGoogleSignIn> Sign in with Google </Button>
       </form>
     </S.Container>
   );

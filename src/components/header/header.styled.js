@@ -28,4 +28,5 @@ Header.Options = styled.div`
 
 Header.Option = styled(Link)`
   padding: 10px 15px;
+  cursor: pointer;
 `;
