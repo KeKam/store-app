@@ -47,9 +47,12 @@ const SignIn = () => {
           label='password'
           required
         />
-
-        <Button type='submit'> Sign in </Button>
-        <Button onClick={signInWithGoogle} isGoogleSignIn> Sign in with Google </Button>
+        <S.ButtonsContainer>
+          <Button type='submit'> Sign in </Button>
+          <Button onClick={signInWithGoogle} isGoogleSignIn>
+            Sign in with Google
+          </Button>
+        </S.ButtonsContainer>
       </form>
     </S.Container>
   );

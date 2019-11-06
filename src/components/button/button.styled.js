@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Button = () => {};
 
 Button.Button = styled.button`
+  display: flex;
+  justify-content: center;
   font-size: 15px;
   width: auto;
   min-width: 165px;
@@ -15,11 +17,11 @@ Button.Button = styled.button`
   font-weight: bolder;
   border: none;
   cursor: pointer;
-  background-color: black;
+  background-color: ${props => (props.isGoogleSignIn ? '#4285f4' : 'black')};
 
   &:hover {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
+    background-color: ${props => (props.isGoogleSignIn ? '#357ae8' : 'white')};
+    color: ${props => (props.isGoogleSignIn ? 'white' : 'black')};
+    border: ${props => (props.isGoogleSignIn ? 'none' : '1px solid black')};
   }
 `;
