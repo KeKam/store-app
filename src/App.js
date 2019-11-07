@@ -5,15 +5,28 @@ import HomePage from './pages/homepage/homepage';
 import CollectionPage from './pages/collection-page/collection-page';
 import LoginPage from './pages/login-page/login-page';
 import Header from './components/header/header';
-import { auth } from './firebase/firebase';
+import { auth, createUserProfileDocument } from './firebase/firebase';
 import { GlobalStyle } from './components/global-styles/global-style';
 
-const useAuthUser = props => {
+const useAuthUser = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-      setUser(user);
+    const unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
+
+        userRef.onSnapshot(snapShot => {
+          setUser({
+            user: {
+              id: snapShot.id,
+              ...snapShot.data()
+            }
+          });
+        });
+      } else {
+        setUser({ user: userAuth });
+      }
     });
 
     return () => {
