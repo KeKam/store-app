@@ -25,7 +25,7 @@ const useAuthUser = () => {
           });
         });
       } else {
-        setUser({ user: userAuth });
+        setUser(userAuth);
       }
     });
 
