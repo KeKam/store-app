@@ -5,7 +5,7 @@ import { FormInput as S } from './form-input.styled';
 const FormInput = ({ label, value, ...inputProps }) => {
   return (
     <S.Container>
-      <S.Input {...inputProps} />
+      <S.Input value={value} {...inputProps} />
       {label ? <S.Label value={value}>{label}</S.Label> : ''}
     </S.Container>
   );
