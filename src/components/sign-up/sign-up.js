@@ -13,7 +13,6 @@ const SignUp = () => {
 
   const onSubmit = async e => {
     e.preventDefault();
-    resetFields();
 
     if (password !== confirmPassword) {
       alert('Password does not match');
@@ -27,7 +26,7 @@ const SignUp = () => {
       );
 
       await createUserProfileDocument(user, { displayName });
-      // resetFields();
+      resetFields();
 
     } catch (error) {
       console.error(error);
@@ -59,7 +58,6 @@ const SignUp = () => {
     setEmail('');
     setPassword('');
     setConfirmPassword('');
-    console.log(email);
   };
 
   return (
