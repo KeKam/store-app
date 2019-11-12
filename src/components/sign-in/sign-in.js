@@ -2,17 +2,22 @@ import React, { useState } from 'react';
 
 import FormInput from '../form-input/form-input';
 import Button from '../button/button';
-import { signInWithGoogle } from '../../firebase/firebase';
+import { signInWithGoogle, auth } from '../../firebase/firebase';
 import { SignIn as S } from './sign-in.styled';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const onSubmit = e => {
+  const onSubmit = async e => {
     e.preventDefault();
-    setEmail('');
-    setPassword('');
+
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      resetFields();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const onEmailChange = e => {
@@ -23,6 +28,11 @@ const SignIn = () => {
   const onPasswordChange = e => {
     const inputValue = e.target.value;
     setPassword(inputValue);
+  };
+
+  const resetFields = () => {
+    setEmail('');
+    setPassword('');
   };
 
   return (
@@ -36,7 +46,7 @@ const SignIn = () => {
           type='email'
           value={email}
           onChange={onEmailChange}
-          label='email'
+          label='Email'
           required
         />
         <FormInput
@@ -44,7 +54,7 @@ const SignIn = () => {
           type='password'
           value={password}
           onChange={onPasswordChange}
-          label='password'
+          label='Password'
           required
         />
         <S.ButtonsContainer>
