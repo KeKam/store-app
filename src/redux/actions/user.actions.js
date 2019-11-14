@@ -1,6 +1,6 @@
-export const SET_USER = user => {
+export const SET_CURRENT_USER = user => {
   return {
-    type: 'SET_USER',
+    type: 'SET_CURRENT_USER',
     payload: user
   };
 };
