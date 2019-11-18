@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import { auth } from '../../firebase/firebase';
 import { Header as S } from './header.styled';
@@ -22,4 +23,8 @@ const Header = ({ user }) => {
   );
 };
 
-export default Header;
+export default connect(state => {
+  return {
+    user: state.user.currentUser
+  };
+})(Header);

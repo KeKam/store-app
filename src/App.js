@@ -1,49 +1,41 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import HomePage from './pages/homepage/homepage';
 import CollectionPage from './pages/collection-page/collection-page';
 import LoginPage from './pages/login-page/login-page';
 import Header from './components/header/header';
 import { auth, createUserProfileDocument } from './firebase/firebase';
+import { setCurrentUser } from './redux/actions/user.actions';
 import { GlobalStyle } from './components/global-styles/global-style';
 
-const useAuthUser = () => {
-  const [user, setUser] = useState(null);
-
+const App = ({ setCurrentUser }) => {
   useEffect(() => {
-    const unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
-      if (userAuth) {
-        const userRef = await createUserProfileDocument(userAuth);
+    const unsubscribeFromAuth = auth.onAuthStateChanged(async user => {
+      if (user) {
+        const userRef = await createUserProfileDocument(user);
 
         userRef.onSnapshot(snapShot => {
-          setUser({
-            user: {
-              id: snapShot.id,
-              ...snapShot.data()
-            }
+          setCurrentUser({
+            id: snapShot.id,
+            ...snapShot.data()
           });
         });
       } else {
-        setUser(userAuth);
+        setCurrentUser(user);
       }
     });
 
     return () => {
       unsubscribeFromAuth();
     };
-  }, []);
-
-  return user;
-};
-
-const App = () => {
-  const user = useAuthUser();
+  }, [setCurrentUser]);
 
   return (
     <div>
       <GlobalStyle />
-      <Header user={user} />
+      <Header />
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route path='/collection' component={CollectionPage} />
@@ -53,4 +45,6 @@ const App = () => {
   );
 };
 
-export default App;
+export default connect(undefined, {
+  setCurrentUser
+})(App);
