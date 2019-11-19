@@ -1,7 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
-import userReducer from '../reducers/user.reducer';
+import userReducer from '../reducers/user/user.reducer';
 
 const middlewares = [logger];
 
