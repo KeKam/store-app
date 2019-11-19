@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import HomePage from './pages/homepage/homepage';
@@ -10,7 +10,7 @@ import { auth, createUserProfileDocument } from './firebase/firebase';
 import { setCurrentUser } from './redux/actions/user.actions';
 import { GlobalStyle } from './components/global-styles/global-style';
 
-const App = ({ setCurrentUser }) => {
+const App = ({ setCurrentUser, currentUser }) => {
   useEffect(() => {
     const unsubscribeFromAuth = auth.onAuthStateChanged(async user => {
       if (user) {
@@ -39,12 +39,23 @@ const App = ({ setCurrentUser }) => {
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route path='/collection' component={CollectionPage} />
-        <Route path='/login' component={LoginPage} />
+        <Route
+          exact
+          path='/login'
+          render={() => (currentUser ? <Redirect to='/' /> : <LoginPage />)}
+        />
       </Switch>
     </div>
   );
 };
 
-export default connect(undefined, {
-  setCurrentUser
-})(App);
+export default connect(
+  state => {
+    return {
+      currentUser: state.user.currentUser
+    };
+  },
+  {
+    setCurrentUser
+  }
+)(App);
