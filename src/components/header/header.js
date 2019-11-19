@@ -4,15 +4,15 @@ import { connect } from 'react-redux';
 import { auth } from '../../firebase/firebase';
 import { Header as S } from './header.styled';
 
-const Header = ({ user }) => {
+const Header = ({ currentUser }) => {
   return (
     <S.Container>
       <S.Logo to='/'>Placeholder</S.Logo>
       <S.Options>
         <S.Option to='/collection'>COLLECTION</S.Option>
         <S.Option to='/contact'>CONTACT</S.Option>
-        {user ? (
-          <S.Option as='div' onClick={() => auth.signOut()}>
+        {currentUser ? (
+          <S.Option as='div' to='' onClick={() => auth.signOut()}>
             SIGN OUT
           </S.Option>
         ) : (
@@ -25,6 +25,6 @@ const Header = ({ user }) => {
 
 export default connect(state => {
   return {
-    user: state.user.currentUser
+    currentUser: state.user.currentUser
   };
 })(Header);
