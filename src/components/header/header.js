@@ -3,9 +3,10 @@ import { connect } from 'react-redux';
 
 import { auth } from '../../firebase/firebase';
 import CartIcon from '../cart-icon/cart-icon';
+import CartDropdown from '../cart-dropdown/cart-dropdown';
 import { Header as S } from './header.styled';
 
-const Header = ({ currentUser }) => {
+const Header = ({ currentUser, hidden }) => {
   return (
     <S.Container>
       <S.Logo to='/'>Placeholder</S.Logo>
@@ -21,12 +22,14 @@ const Header = ({ currentUser }) => {
         )}
         <CartIcon />
       </S.Options>
+      {hidden ? null : <CartDropdown />}
     </S.Container>
   );
 };
 
 export default connect(state => {
   return {
-    currentUser: state.user.currentUser
+    currentUser: state.user.currentUser,
+    hidden: state.cart.hidden
   };
 })(Header);
