@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import Button from '../button/button';
+
 export const CollectionItem = () => {};
 
 CollectionItem.Container = styled.div`
@@ -8,6 +10,7 @@ CollectionItem.Container = styled.div`
   align-items: center;
   width: 22%;
   height: 350px;
+  position: relative;
 `;
 
 CollectionItem.Image = styled.div`
@@ -17,6 +20,10 @@ CollectionItem.Image = styled.div`
   background-position: center;
   margin-bottom: 5px;
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+
+  ${CollectionItem.Container}:hover & {
+    opacity: 0.7;
+  }
 `;
 
 CollectionItem.Footer = styled.div`
@@ -25,6 +32,19 @@ CollectionItem.Footer = styled.div`
   font-size: 18px;
   width: 100%;
   height: 5%;
+`;
+
+CollectionItem.Button = styled(Button)`
+  display: none;
+  position: absolute;
+  top: 270px;
+  width: 80%;
+  opacity: 0.6;
+
+  ${CollectionItem.Container}:hover & {
+    display: flex;
+    opacity: 0.75;
+  }
 `;
 
 CollectionItem.Title = styled.span`

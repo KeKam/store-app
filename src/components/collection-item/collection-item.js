@@ -10,6 +10,7 @@ const CollectionItem = ({ id, name, imageUrl, price }) => {
         <S.Title>{name}</S.Title>
         <S.Title>{price}</S.Title>
       </S.Footer>
+      <S.Button>ADD TO CART</S.Button>
     </S.Container>
   );
 };
