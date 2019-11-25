@@ -66,49 +66,49 @@ export const COLLECTION_DATA = [
     routeName: 'placeholder2',
     items: [
       {
-        id: 1,
+        id: 10,
         name: 'Placeholder',
         imageUrl: 'https://i.ibb.co/0s3pdnc/adidas-nmd.png',
         price: 220
       },
       {
-        id: 2,
+        id: 11,
         name: 'Placeholder',
         imageUrl: 'https://i.ibb.co/dJbG1cT/yeezy.png',
         price: 280
       },
       {
-        id: 3,
+        id: 12,
         name: 'Placeholder',
         imageUrl: 'https://i.ibb.co/bPmVXyP/black-converse.png',
         price: 110
       },
       {
-        id: 4,
+        id: 13,
         name: 'Placeholder',
         imageUrl: 'https://i.ibb.co/1RcFPk0/white-nike-high-tops.png',
         price: 160
       },
       {
-        id: 5,
+        id: 14,
         name: 'Placeholder',
         imageUrl: 'https://i.ibb.co/QcvzydB/nikes-red.png',
         price: 160
       },
       {
-        id: 6,
+        id: 15,
         name: 'Placeholder',
         imageUrl: 'https://i.ibb.co/fMTV342/nike-brown.png',
         price: 160
       },
       {
-        id: 7,
+        id: 16,
         name: 'Placeholder',
         imageUrl: 'https://i.ibb.co/w4k6Ws9/nike-funky.png',
         price: 190
       },
       {
-        id: 8,
+        id: 17,
         name: 'Placeholder',
         imageUrl: 'https://i.ibb.co/Mhh6wBg/timberlands.png',
         price: 200
@@ -121,31 +121,31 @@ export const COLLECTION_DATA = [
     routeName: 'placeholder3',
     items: [
       {
-        id: 1,
+        id: 18,
         name: 'Placeholder',
         imageUrl: 'https://i.ibb.co/XzcwL5s/black-shearling.png',
         price: 125
       },
       {
-        id: 2,
+        id: 19,
         name: 'Placeholder',
         imageUrl: 'https://i.ibb.co/mJS6vz0/blue-jean-jacket.png',
         price: 90
       },
       {
-        id: 3,
+        id: 20,
         name: 'Placeholder',
         imageUrl: 'https://i.ibb.co/N71k1ML/grey-jean-jacket.png',
         price: 90
       },
       {
-        id: 4,
+        id: 21,
         name: 'Placeholder',
         imageUrl: 'https://i.ibb.co/s96FpdP/brown-shearling.png',
         price: 165
       },
       {
-        id: 5,
+        id: 22,
         name: 'Placeholder',
         imageUrl: 'https://i.ibb.co/M6hHc3F/brown-trench.png',
         price: 185
@@ -158,37 +158,37 @@ export const COLLECTION_DATA = [
     routeName: 'placeholder4',
     items: [
       {
-        id: 1,
+        id: 23,
         name: 'Placeholder',
         imageUrl: 'https://i.ibb.co/7CQVJNm/blue-tank.png',
         price: 25
       },
       {
-        id: 2,
+        id: 24,
         name: 'Placeholder',
         imageUrl: 'https://i.ibb.co/4W2DGKm/floral-blouse.png',
         price: 20
       },
       {
-        id: 3,
+        id: 25,
         name: 'Placeholder',
         imageUrl: 'https://i.ibb.co/KV18Ysr/floral-skirt.png',
         price: 80
       },
       {
-        id: 4,
+        id: 26,
         name: 'Placeholder',
         imageUrl: 'https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png',
         price: 80
       },
       {
-        id: 5,
+        id: 27,
         name: 'Placeholder',
         imageUrl: 'https://i.ibb.co/KmSkMbH/striped-sweater.png',
         price: 45
       },
       {
-        id: 6,
+        id: 27,
         name: 'Placeholder',
         imageUrl: 'https://i.ibb.co/v1cvwNf/yellow-track-suit.png',
         price: 135
