@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { selectCartItems } from '../../redux/selectors/cart.selectors';
 import CartItem from '../cart-item/cart-item';
 import { CartDropdown as S } from './cart-dropdown.styles';
 
@@ -19,6 +20,6 @@ const CartDropdown = ({ cartItems }) => {
 
 export default connect(state => {
   return {
-    cartItems: state.cart.cartItems
+    cartItems: selectCartItems(state)
   };
 })(CartDropdown);
