@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { toggleCart } from '../../redux/actions/cart/cart.actions';
+import { toggleCart } from '../../redux/actions/cart.actions';
 import { CartIcon as S } from './cart-icon.styled';
 
 const CartIcon = ({ toggleCart }) => {

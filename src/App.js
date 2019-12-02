@@ -7,7 +7,7 @@ import CollectionPage from './pages/collection-page/collection-page';
 import LoginPage from './pages/login-page/login-page';
 import Header from './components/header/header';
 import { auth, createUserProfileDocument } from './firebase/firebase';
-import { setCurrentUser } from './redux/actions/user/user.actions';
+import { setCurrentUser } from './redux/actions/user.actions';
 import { GlobalStyle } from './components/global-styles/global-style';
 
 const App = ({ setCurrentUser, currentUser }) => {
