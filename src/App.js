@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import HomePage from './pages/homepage/homepage';
 import CollectionPage from './pages/collection-page/collection-page';
 import LoginPage from './pages/login-page/login-page';
 import Header from './components/header/header';
+import { selectCurrentUser } from './redux/selectors/user.selectors';
 import { auth, createUserProfileDocument } from './firebase/firebase';
 import { setCurrentUser } from './redux/actions/user.actions';
 import { GlobalStyle } from './components/global-styles/global-style';
@@ -50,11 +52,9 @@ const App = ({ setCurrentUser, currentUser }) => {
 };
 
 export default connect(
-  state => {
-    return {
-      currentUser: state.user.currentUser
-    };
-  },
+  createStructuredSelector({
+    currentUser: selectCurrentUser
+  }),
   {
     setCurrentUser
   }
