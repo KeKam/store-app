@@ -22,7 +22,12 @@ CartDropdown.Items = styled.div`
   display: flex;
   flex-direction: column;
   height: 240px;
-  overflow: scroll
+  overflow: scroll;
+`;
+
+CartDropdown.Text = styled.span`
+  font-size: 18px;
+  margin: 50px auto;
 `;
 
 CartDropdown.Button = styled(Button)`

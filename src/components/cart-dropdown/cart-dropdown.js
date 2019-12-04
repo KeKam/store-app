@@ -10,9 +10,13 @@ const CartDropdown = ({ cartItems }) => {
   return (
     <S.Container>
       <S.Items>
-        {cartItems.map(cartItem => (
-          <CartItem key={cartItem.id} item={cartItem} />
-        ))}
+        {cartItems.length ? (
+          cartItems.map(cartItem => (
+            <CartItem key={cartItem.id} item={cartItem} />
+          ))
+        ) : (
+          <S.Text>You have no added items</S.Text>
+        )}
       </S.Items>
       <S.Button>GO TO CHECKOUT</S.Button>
     </S.Container>
