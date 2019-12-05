@@ -6,7 +6,7 @@ CheckoutPage.Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
+  width: 55%;
   min-height: 90vh;
   margin: 50px auto 0;
 `;
@@ -20,10 +20,10 @@ CheckoutPage.Header = styled.div`
 `;
 
 CheckoutPage.Block = styled.div`
-  width: 22%;
+  width: 23%;
 
   &:last-child {
-    width: 7%;
+    width: 8%;
   }
 `;
 
