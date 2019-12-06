@@ -1,6 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
+import { useSelector } from 'react-redux';
 
 import { selectCurrentUser } from '../../redux/selectors/user.selectors';
 import { selectCartHidden } from '../../redux/selectors/cart.selectors';
@@ -9,7 +8,10 @@ import CartIcon from '../cart-icon/cart-icon';
 import CartDropdown from '../cart-dropdown/cart-dropdown';
 import { Header as S } from './header.styled';
 
-const Header = ({ currentUser, hidden }) => {
+const Header = () => {
+  const currentUser = useSelector(selectCurrentUser);
+  const hidden = useSelector(selectCartHidden);
+
   return (
     <S.Container>
       <S.Logo to='/'>Placeholder</S.Logo>
@@ -30,9 +32,4 @@ const Header = ({ currentUser, hidden }) => {
   );
 };
 
-export default connect(
-  createStructuredSelector({
-    currentUser: selectCurrentUser,
-    hidden: selectCartHidden
-  })
-)(Header);
+export default Header;

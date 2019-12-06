@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
+import { useSelector, useDispatch } from 'react-redux';
 
 import HomePage from './pages/homepage/homepage';
 import CollectionPage from './pages/collection-page/collection-page';
@@ -13,27 +12,33 @@ import { auth, createUserProfileDocument } from './firebase/firebase';
 import { setCurrentUser } from './redux/actions/user.actions';
 import { GlobalStyle } from './components/global-styles/global-style';
 
-const App = ({ setCurrentUser, currentUser }) => {
+const App = () => {
+  const currentUser = useSelector(selectCurrentUser);
+  const dispatch = useDispatch();
+
   useEffect(() => {
+    console.log('test');
     const unsubscribeFromAuth = auth.onAuthStateChanged(async user => {
       if (user) {
         const userRef = await createUserProfileDocument(user);
 
         userRef.onSnapshot(snapShot => {
-          setCurrentUser({
-            id: snapShot.id,
-            ...snapShot.data()
-          });
+          dispatch(
+            setCurrentUser({
+              id: snapShot.id,
+              ...snapShot.data()
+            })
+          );
         });
       } else {
-        setCurrentUser(user);
+        dispatch(setCurrentUser(user));
       }
     });
 
     return () => {
       unsubscribeFromAuth();
     };
-  }, [setCurrentUser]);
+  }, [dispatch]);
 
   return (
     <div>
@@ -53,11 +58,4 @@ const App = ({ setCurrentUser, currentUser }) => {
   );
 };
 
-export default connect(
-  createStructuredSelector({
-    currentUser: selectCurrentUser
-  }),
-  {
-    setCurrentUser
-  }
-)(App);
+export default App;
