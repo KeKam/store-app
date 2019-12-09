@@ -26,8 +26,17 @@ CheckoutItem.Text = styled.span`
   width: 23%;
 `;
 
-CheckoutItem.Quantity = styled(CheckoutItem.Text)`
+CheckoutItem.QuantityContainer = styled(CheckoutItem.Text)`
+  display: flex;
   padding-left: 20px;
+
+  span {
+    margin: 0 10px;
+  }
+`;
+
+CheckoutItem.Arrow = styled.div`
+  cursor: pointer;
 `;
 
 CheckoutItem.Button = styled.div`

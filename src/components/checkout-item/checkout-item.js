@@ -1,17 +1,36 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 
+import {
+  removeFromCart,
+  removeItem,
+  addToCart
+} from '../../redux/actions/cart.actions';
 import { CheckoutItem as S } from './checkout-item.styled';
 
-const CheckoutItem = ({ cartItem: { name, imageUrl, price, quantity } }) => {
+const CheckoutItem = ({ cartItem }) => {
+  const { name, imageUrl, price, quantity } = cartItem;
+  const dispatch = useDispatch();
+
   return (
     <S.Container>
       <S.ImageContainer>
         <S.Image alt='item' src={imageUrl} />
       </S.ImageContainer>
       <S.Text>{name}</S.Text>
-      <S.Quantity>{quantity}</S.Quantity>
+      <S.QuantityContainer>
+        <S.Arrow onClick={() => dispatch(removeFromCart(cartItem))}>
+          &#10094;
+        </S.Arrow>
+        <span>{quantity}</span>
+        <S.Arrow onClick={() => dispatch(addToCart(cartItem))}>
+          &#10095;
+        </S.Arrow>
+      </S.QuantityContainer>
       <S.Text>{price}</S.Text>
-      <S.Button>&#10005;</S.Button>
+      <S.Button onClick={() => dispatch(removeItem(cartItem))}>
+        &#10005;
+      </S.Button>
     </S.Container>
   );
 };
