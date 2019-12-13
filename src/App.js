@@ -17,7 +17,6 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log('test');
     const unsubscribeFromAuth = auth.onAuthStateChanged(async user => {
       if (user) {
         const userRef = await createUserProfileDocument(user);

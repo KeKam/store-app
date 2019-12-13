@@ -6,3 +6,9 @@ export const selectCollectionItems = createSelector(
   [selectCollection],
   collection => collection.collectionItems
 );
+
+export const selectCollectionCategory = categoryUrlParam =>
+  createSelector(
+    [selectCollectionItems],
+    collectionItems => collectionItems[categoryUrlParam]
+  );

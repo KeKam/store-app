@@ -1,5 +1,5 @@
-export const COLLECTION_DATA = [
-  {
+export const COLLECTION_DATA = {
+  placeholder1: {
     id: 1,
     title: 'Placeholder',
     routeName: 'placeholder1',
@@ -60,7 +60,7 @@ export const COLLECTION_DATA = [
       }
     ]
   },
-  {
+  placeholder2: {
     id: 2,
     title: 'Placeholder',
     routeName: 'placeholder2',
@@ -115,7 +115,7 @@ export const COLLECTION_DATA = [
       }
     ]
   },
-  {
+  placeholder3: {
     id: 3,
     title: 'Placeholder',
     routeName: 'placeholder3',
@@ -152,7 +152,7 @@ export const COLLECTION_DATA = [
       }
     ]
   },
-  {
+  placeholder4: {
     id: 4,
     title: 'Placeholder',
     routeName: 'placeholder4',
@@ -201,4 +201,4 @@ export const COLLECTION_DATA = [
       }
     ]
   }
-];
+};
