@@ -31,9 +31,9 @@ const CheckoutPage = () => {
           <span>Remove</span>
         </S.Block>
       </S.Header>
-      {cartItems.map(cartItem => {
-        return <CheckoutItem key={cartItem.id} cartItem={cartItem} />;
-      })}
+      {cartItems.map(cartItem => (
+        <CheckoutItem key={cartItem.id} cartItem={cartItem} />
+      ))}
       <S.TotalContainer>
         <span>TOTAL: {cartTotal} €</span>
       </S.TotalContainer>
