@@ -7,6 +7,12 @@ export const selectCollectionItems = createSelector(
   collection => collection.collectionItems
 );
 
+export const selectCollectionsForPreview = createSelector(
+  [selectCollectionItems],
+  collectionItems =>
+    Object.keys(collectionItems).map(key => collectionItems[key])
+);
+
 export const selectCollectionCategory = categoryUrlParam =>
   createSelector(
     [selectCollectionItems],
