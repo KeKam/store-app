@@ -9,6 +9,11 @@ CheckoutPage.Container = styled.div`
   width: 55%;
   min-height: 90vh;
   margin: 50px auto 0;
+
+  button {
+    margin-top: 50px;
+    margin-left: auto;
+  }
 `;
 
 CheckoutPage.Header = styled.div`
@@ -31,4 +36,11 @@ CheckoutPage.TotalContainer = styled.div`
   font-size: 36px;
   margin-top: 30px;
   margin-left: auto;
+`;
+
+CheckoutPage.Warning = styled.div`
+  color: red;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 40px;
 `;
