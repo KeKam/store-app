@@ -2,6 +2,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import thunk from 'redux-thunk';
 
 import userReducer from '../reducers/user.reducer';
 import cartReducer from '../reducers/cart.reducer';
@@ -12,7 +13,7 @@ const rootReducer = combineReducers({
   user: userReducer,
   cart: cartReducer,
   directory: directoryReducer,
-  collection:collectionReducer
+  collection: collectionReducer
 });
 
 const persistConfig = {
@@ -23,7 +24,7 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-const middlewares = [logger];
+const middlewares = [thunk, logger];
 
 export const store = createStore(
   persistedReducer,
