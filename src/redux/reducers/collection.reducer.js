@@ -1,7 +1,7 @@
 import { CollectionActionTypes } from '../types/collection.types';
 
 const DEFAULT_STATE = {
-  categories: [],
+  categories: null,
   isFetching: false,
   error: undefined
 };

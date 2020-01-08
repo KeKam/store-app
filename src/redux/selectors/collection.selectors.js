@@ -9,16 +9,21 @@ export const selectCollectionCategories = createSelector(
 
 export const selectCollectionCategoriesForPreview = createSelector(
   [selectCollectionCategories],
-  categories => Object.keys(categories).map(key => categories[key])
+  categories => categories ? Object.keys(categories).map(key => categories[key]) : []
 );
 
 export const selectCollectionCategory = categoryUrlParam =>
   createSelector(
     [selectCollectionCategories],
-    categories => categories[categoryUrlParam]
+    categories => categories ? categories[categoryUrlParam] : null
   );
 
 export const selectIsCollectionFetching = createSelector(
   [selectCollection],
   collection => collection.isFetching
+);
+
+export const selectIsCollectionFetched = createSelector(
+  [selectCollection],
+  collection => !!collection.categories
 );
