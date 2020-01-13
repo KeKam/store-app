@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const WithSpinner = () => {};
+export const Spinner = () => {};
 
-WithSpinner.Container = styled.div`
+Spinner.Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +10,7 @@ WithSpinner.Container = styled.div`
   width: 100%;
 `;
 
-WithSpinner.Spinner = styled.div`
+Spinner.Spinner = styled.div`
   display: inline-block;
   width: 50px;
   height: 50px;
