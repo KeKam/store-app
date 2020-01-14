@@ -1,4 +1,4 @@
-import { CollectionActionTypes } from '../types/collection.types';
+import { CollectionActionTypes } from './collection.types';
 
 const DEFAULT_STATE = {
   categories: null,

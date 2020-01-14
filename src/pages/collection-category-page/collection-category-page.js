@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import {
   selectCollectionCategory,
   selectIsCollectionFetched
-} from '../../redux/selectors/collection.selectors';
+} from '../../redux/collection/collection.selectors';
 import CollectionItem from '../../components/collection-item/collection-item';
 import Spinner from '../../components/spinner/spinner';
 import { CollectionCategoryPage as S } from './collection-category-page.styled';

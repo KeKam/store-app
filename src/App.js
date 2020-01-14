@@ -7,9 +7,9 @@ import CollectionPage from './pages/collection-page/collection-page';
 import CheckoutPage from './pages/checkout-page/checkout-page';
 import LoginPage from './pages/login-page/login-page';
 import Header from './components/header/header';
-import { selectCurrentUser } from './redux/selectors/user.selectors';
+import { selectCurrentUser } from './redux/user/user.selectors';
 import { auth, createUserProfileDocument } from './firebase/firebase';
-import { setCurrentUser } from './redux/actions/user.actions';
+import { setCurrentUser } from './redux/user/user.actions';
 import { GlobalStyle } from './components/global-styles/global-style';
 
 const App = () => {

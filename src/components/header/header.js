@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import { selectCurrentUser } from '../../redux/selectors/user.selectors';
-import { selectCartHidden } from '../../redux/selectors/cart.selectors';
+import { selectCurrentUser } from '../../redux/user/user.selectors';
+import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { auth } from '../../firebase/firebase';
 import CartIcon from '../cart-icon/cart-icon';
 import CartDropdown from '../cart-dropdown/cart-dropdown';

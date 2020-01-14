@@ -1,4 +1,4 @@
-import { CollectionActionTypes } from '../types/collection.types';
+import { CollectionActionTypes } from './collection.types';
 import {
   firestore,
   convertCollectionSnapshotToMap

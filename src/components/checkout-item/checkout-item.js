@@ -5,7 +5,7 @@ import {
   removeFromCart,
   removeItem,
   addToCart
-} from '../../redux/actions/cart.actions';
+} from '../../redux/cart/cart.actions';
 import { CheckoutItem as S } from './checkout-item.styled';
 
 const CheckoutItem = ({ cartItem }) => {

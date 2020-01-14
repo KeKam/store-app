@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import {
   selectCartItems,
   selectCartTotal
-} from '../../redux/selectors/cart.selectors';
+} from '../../redux/cart/cart.selectors';
 import CheckoutItem from '../../components/checkout-item/checkout-item';
 import StipeCheckoutButton from '../../components/stripe-checkout-button/stripe-checkout-button';
 import { CheckoutPage as S } from './checkout-page.styled';

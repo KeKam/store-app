@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-import { addToCart } from '../../redux/actions/cart.actions';
+import { addToCart } from '../../redux/cart/cart.actions';
 import { CollectionItem as S } from './collection-item.styled';
 
 const CollectionItem = ({ item }) => {

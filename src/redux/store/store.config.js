@@ -4,10 +4,10 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import thunk from 'redux-thunk';
 
-import userReducer from '../reducers/user.reducer';
-import cartReducer from '../reducers/cart.reducer';
-import directoryReducer from '../reducers/directory.reducer';
-import collectionReducer from '../reducers/collection.reducer';
+import userReducer from '../user/user.reducer';
+import cartReducer from '../cart/cart.reducer';
+import directoryReducer from '../directory/directory.reducer';
+import collectionReducer from '../collection/collection.reducer';
 
 const rootReducer = combineReducers({
   user: userReducer,

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
-import { startAsyncFetchCollection } from '../../redux/actions/collection.actions';
+import { startAsyncFetchCollection } from '../../redux/collection/collection.actions';
 import CollectionOverview from '../../components/collection-overview/collection-overview';
 import CollectionCategoryPage from '../collection-category-page/collection-category-page';
 

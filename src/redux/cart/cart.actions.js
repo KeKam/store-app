@@ -1,4 +1,4 @@
-import { CartActionTypes } from '../types/cart.types';
+import { CartActionTypes } from './cart.types';
 
 export const toggleCart = () => ({
   type: CartActionTypes.TOGGLE_CART

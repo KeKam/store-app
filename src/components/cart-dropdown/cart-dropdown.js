@@ -2,8 +2,8 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import { selectCartItems } from '../../redux/selectors/cart.selectors';
-import { toggleCart } from '../../redux/actions/cart.actions';
+import { selectCartItems } from '../../redux/cart/cart.selectors';
+import { toggleCart } from '../../redux/cart/cart.actions';
 import CartItem from '../cart-item/cart-item';
 import { CartDropdown as S } from './cart-dropdown.styles';
 
