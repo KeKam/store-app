@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 import FormInput from '../form-input/form-input';
 import Button from '../button/button';
-import { signInWithGoogle, auth } from '../../firebase/firebase';
+import {
+  startGoogleSignIn,
+  startEmailSignIn
+} from '../../redux/user/user.actions';
 import { SignIn as S } from './sign-in.styled';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const dispatch = useDispatch();
 
-  const onSubmit = async e => {
+  const onSubmit = e => {
     e.preventDefault();
-
-    try {
-      await auth.signInWithEmailAndPassword(email, password);
-      resetFields();
-    } catch (error) {
-      console.log(error);
-    }
+    dispatch(startEmailSignIn({ email, password }));
+    resetFields();
   };
 
   const onEmailChange = e => {
@@ -59,7 +59,11 @@ const SignIn = () => {
         />
         <S.ButtonsContainer>
           <Button type='submit'> Sign in </Button>
-          <Button onClick={signInWithGoogle} isGoogleSignIn>
+          <Button
+            type='button'
+            onClick={() => dispatch(startGoogleSignIn())}
+            isGoogleSignIn
+          >
             Sign in with Google
           </Button>
         </S.ButtonsContainer>

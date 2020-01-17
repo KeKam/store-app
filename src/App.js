@@ -8,8 +8,6 @@ import CheckoutPage from './pages/checkout-page/checkout-page';
 import LoginPage from './pages/login-page/login-page';
 import Header from './components/header/header';
 import { selectCurrentUser } from './redux/user/user.selectors';
-import { auth, createUserProfileDocument } from './firebase/firebase';
-import { setCurrentUser } from './redux/user/user.actions';
 import { GlobalStyle } from './components/global-styles/global-style';
 
 const App = () => {
@@ -17,26 +15,26 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const unsubscribeFromAuth = auth.onAuthStateChanged(async user => {
-      if (user) {
-        const userRef = await createUserProfileDocument(user);
+    // const unsubscribeFromAuth = auth.onAuthStateChanged(async user => {
+    //   if (user) {
+    //     const userRef = await createUserProfileDocument(user);
 
-        userRef.onSnapshot(snapShot => {
-          dispatch(
-            setCurrentUser({
-              id: snapShot.id,
-              ...snapShot.data()
-            })
-          );
-        });
-      } else {
-        dispatch(setCurrentUser(user));
-      }
-    });
+    //     userRef.onSnapshot(snapShot => {
+    //       dispatch(
+    //         setCurrentUser({
+    //           id: snapShot.id,
+    //           ...snapShot.data()
+    //         })
+    //       );
+    //     });
+    //   } else {
+    //     dispatch(setCurrentUser(user));
+    //   }
+    // });
 
-    return () => {
-      unsubscribeFromAuth();
-    };
+    // return () => {
+    //   unsubscribeFromAuth();
+    // };
   }, [dispatch]);
 
   return (
