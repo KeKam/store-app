@@ -1,4 +1,4 @@
-import { UserActionTypes } from './user.types';
+import UserActionTypes from './user.types';
 
 const DEFAULT_STATE = {
   currentUser: null,
@@ -17,7 +17,7 @@ const userReducer = (state = DEFAULT_STATE, action) => {
       return {
         ...state,
         error: action.payload
-      }
+      };
     default:
       return state;
   }

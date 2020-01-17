@@ -1,5 +1,7 @@
-export const CollectionActionTypes = {
+const CollectionActionTypes = {
   START_FETCH_COLLECTION: 'START_FETCH_COLLECTION',
   FETCH_COLLECTION_SUCCESS: 'FETCH_COLLECTION_SUCCESS',
   FETCH_COLLECTION_FAILURE: 'FETCH_COLLECTION_FAILURE'
 };
+
+export default CollectionActionTypes;

@@ -24,7 +24,7 @@ export const createUserProfileDocument = async (user, additionalData) => {
     const createdAt = new Date();
 
     try {
-      userRef.set({
+      await userRef.set({
         displayName,
         email,
         createdAt,
@@ -47,7 +47,6 @@ export const addCollectionAndDocuments = async (
   objectsToAdd.forEach(obj => {
     const newDocRef = collectionRef.doc();
     batch.set(newDocRef, obj);
-    console.log(newDocRef);
   });
 
   return await batch.commit();

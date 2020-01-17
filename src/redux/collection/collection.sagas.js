@@ -1,5 +1,6 @@
 import { takeLatest, call, put, all } from 'redux-saga/effects';
 
+import CollectionActionTypes from './collection.types';
 import {
   firestore,
   convertCollectionSnapshotToMap
@@ -8,7 +9,6 @@ import {
   fetchCollectionSuccess,
   fetchCollectionFailure
 } from './collection.actions';
-import { CollectionActionTypes } from './collection.types';
 
 export function* fetchCollection() {
   try {
@@ -17,7 +17,7 @@ export function* fetchCollection() {
     const collectionMap = yield call(convertCollectionSnapshotToMap, snapshot);
     yield put(fetchCollectionSuccess(collectionMap));
   } catch (error) {
-    yield put(fetchCollectionFailure(error.message));
+    yield put(fetchCollectionFailure(error));
   }
 }
 

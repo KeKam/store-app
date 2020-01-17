@@ -1,4 +1,4 @@
-import { CollectionActionTypes } from './collection.types';
+import CollectionActionTypes from './collection.types';
 
 export const startFetchCollection = () => ({
   type: CollectionActionTypes.START_FETCH_COLLECTION
