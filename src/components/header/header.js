@@ -1,9 +1,9 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
-import { auth } from '../../firebase/firebase';
+import { startSignOut } from '../../redux/user/user.actions';
 import CartIcon from '../cart-icon/cart-icon';
 import CartDropdown from '../cart-dropdown/cart-dropdown';
 import { Header as S } from './header.styled';
@@ -11,6 +11,7 @@ import { Header as S } from './header.styled';
 const Header = () => {
   const currentUser = useSelector(selectCurrentUser);
   const hidden = useSelector(selectCartHidden);
+  const dispatch = useDispatch();
 
   return (
     <S.Container>
@@ -19,7 +20,7 @@ const Header = () => {
         <S.Option to='/collection'>COLLECTION</S.Option>
         <S.Option to='/contact'>CONTACT</S.Option>
         {currentUser ? (
-          <S.Option as='div' to='' onClick={() => auth.signOut()}>
+          <S.Option as='div' to='' onClick={() => dispatch(startSignOut())}>
             SIGN OUT
           </S.Option>
         ) : (
