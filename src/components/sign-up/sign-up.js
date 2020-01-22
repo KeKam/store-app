@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 import FormInput from '../form-input/form-input';
 import Button from '../button/button';
-import { auth, createUserProfileDocument } from '../../firebase/firebase';
 import { SignUp as S } from './sign-up.styled';
+import { startSignUp } from '../../redux/user/user.actions';
 
 const SignUp = () => {
   const [displayName, setDisplayName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const dispatch = useDispatch();
 
-  const onSubmit = async e => {
+  const onSubmit = e => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
@@ -19,18 +21,7 @@ const SignUp = () => {
       return;
     }
 
-    try {
-      const { user } = await auth.createUserWithEmailAndPassword(
-        email,
-        password
-      );
-
-      await createUserProfileDocument(user, { displayName });
-      resetFields();
-
-    } catch (error) {
-      console.error(error);
-    }
+    dispatch(startSignUp({ displayName, email, password }));
   };
 
   const onDisplayNameChange = e => {
@@ -51,13 +42,6 @@ const SignUp = () => {
   const onConfirmPasswordChange = e => {
     const inputValue = e.target.value;
     setConfirmPassword(inputValue);
-  };
-
-  const resetFields = () => {
-    setDisplayName('');
-    setEmail('');
-    setPassword('');
-    setConfirmPassword('');
   };
 
   return (
