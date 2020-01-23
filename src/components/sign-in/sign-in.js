@@ -10,9 +10,13 @@ import {
 import { SignIn as S } from './sign-in.styled';
 
 const SignIn = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [userCredentials, setUserCredentials] = useState({
+    email: '',
+    password: ''
+  });
   const dispatch = useDispatch();
+
+  const { email, password } = userCredentials;
 
   const onSubmit = e => {
     e.preventDefault();
@@ -20,19 +24,13 @@ const SignIn = () => {
     resetFields();
   };
 
-  const onEmailChange = e => {
-    const inputValue = e.target.value;
-    setEmail(inputValue);
-  };
-
-  const onPasswordChange = e => {
-    const inputValue = e.target.value;
-    setPassword(inputValue);
+  const onInputChange = e => {
+    const { value, name } = e.target;
+    setUserCredentials({ ...userCredentials, [name]: value });
   };
 
   const resetFields = () => {
-    setEmail('');
-    setPassword('');
+    setUserCredentials({ email: '', password: '' });
   };
 
   return (
@@ -45,7 +43,7 @@ const SignIn = () => {
           name='email'
           type='email'
           value={email}
-          onChange={onEmailChange}
+          onChange={onInputChange}
           label='Email'
           required
         />
@@ -53,7 +51,7 @@ const SignIn = () => {
           name='password'
           type='password'
           value={password}
-          onChange={onPasswordChange}
+          onChange={onInputChange}
           label='Password'
           required
         />

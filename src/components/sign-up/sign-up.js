@@ -7,11 +7,15 @@ import { SignUp as S } from './sign-up.styled';
 import { startSignUp } from '../../redux/user/user.actions';
 
 const SignUp = () => {
-  const [displayName, setDisplayName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [userInformation, setUserInformation] = useState({
+    displayName: '',
+    email: '',
+    password: '',
+    confirmPassword: ''
+  });
   const dispatch = useDispatch();
+
+  const { displayName, email, password, confirmPassword } = userInformation;
 
   const onSubmit = e => {
     e.preventDefault();
@@ -24,24 +28,9 @@ const SignUp = () => {
     dispatch(startSignUp({ displayName, email, password }));
   };
 
-  const onDisplayNameChange = e => {
-    const inputValue = e.target.value;
-    setDisplayName(inputValue);
-  };
-
-  const onEmailChange = e => {
-    const inputValue = e.target.value;
-    setEmail(inputValue);
-  };
-
-  const onPasswordChange = e => {
-    const inputValue = e.target.value;
-    setPassword(inputValue);
-  };
-
-  const onConfirmPasswordChange = e => {
-    const inputValue = e.target.value;
-    setConfirmPassword(inputValue);
+  const onInputChange = e => {
+    const { value, name } = e.target;
+    setUserInformation({ ...userInformation, [name]: value });
   };
 
   return (
@@ -54,7 +43,7 @@ const SignUp = () => {
           name='displayName'
           type='text'
           value={displayName}
-          onChange={onDisplayNameChange}
+          onChange={onInputChange}
           label='Display Name'
           required
         />
@@ -62,7 +51,7 @@ const SignUp = () => {
           name='email'
           type='email'
           value={email}
-          onChange={onEmailChange}
+          onChange={onInputChange}
           label='Email'
           required
         />
@@ -70,7 +59,7 @@ const SignUp = () => {
           name='password'
           type='password'
           value={password}
-          onChange={onPasswordChange}
+          onChange={onInputChange}
           label='Password'
           required
         />
@@ -78,7 +67,7 @@ const SignUp = () => {
           name='confirmPassword'
           type='password'
           value={confirmPassword}
-          onChange={onConfirmPasswordChange}
+          onChange={onInputChange}
           label='Confirm Password'
           required
         />
