@@ -21,7 +21,7 @@ const CollectionCategoryPage = ({ match }) => {
         <Spinner />
       ) : (
         <S.Container>
-          <S.Title>{category.title}</S.Title>
+          <S.Title>{category.title.toUpperCase()}</S.Title>
           <S.Items>
             {category.items.map(item => (
               <CollectionItem key={item.id} item={item} />
