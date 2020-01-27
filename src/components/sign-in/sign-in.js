@@ -21,16 +21,11 @@ const SignIn = () => {
   const onSubmit = e => {
     e.preventDefault();
     dispatch(startEmailSignIn({ email, password }));
-    resetFields();
   };
 
   const onInputChange = e => {
     const { value, name } = e.target;
     setUserCredentials({ ...userCredentials, [name]: value });
-  };
-
-  const resetFields = () => {
-    setUserCredentials({ email: '', password: '' });
   };
 
   return (
