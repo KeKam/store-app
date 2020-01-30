@@ -16,6 +16,10 @@ MenuItem.Container = styled.div`
   &:hover {
     cursor: pointer;
   }
+
+  @media screen and (max-width: 800px) {
+    height: 200px;
+  }
 `;
 
 MenuItem.Image = styled.div`

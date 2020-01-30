@@ -14,6 +14,10 @@ CheckoutPage.Container = styled.div`
     margin-top: 50px;
     margin-left: auto;
   }
+
+  @media screen and (max-width: 800px) {
+    width: 90%;
+  }
 `;
 
 CheckoutPage.Header = styled.div`
@@ -29,6 +33,15 @@ CheckoutPage.Block = styled.div`
 
   &:last-child {
     width: 8%;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 22%;
+    margin: 0 7px;
+
+    &:last-child {
+      width: 12%;
+    }
   }
 `;
 

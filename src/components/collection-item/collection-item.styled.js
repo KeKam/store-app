@@ -11,6 +11,10 @@ CollectionItem.Container = styled.div`
   width: 22vw;
   height: 350px;
   position: relative;
+
+  @media screen and (max-width: 800px) {
+    width: 40vw;
+  }
 `;
 
 CollectionItem.Image = styled.div`
@@ -23,6 +27,12 @@ CollectionItem.Image = styled.div`
 
   ${CollectionItem.Container}:hover & {
     opacity: 0.7;
+  }
+
+  @media screen and (max-width: 800px) {
+    ${CollectionItem.Container}:hover & {
+      opacity: unset;
+    }
   }
 `;
 
@@ -38,12 +48,23 @@ CollectionItem.Button = styled(Button)`
   display: none;
   position: absolute;
   top: 270px;
-  width: 80%;
+  width: 90%;
   opacity: 0.6;
 
   ${CollectionItem.Container}:hover & {
     display: flex;
     opacity: 0.75;
+  }
+
+  @media screen and (max-width: 800px) {
+    display: block;
+    opacity: 0.8;
+    min-width: unset;
+    padding: 0;
+
+    ${CollectionItem.Container}:hover & {
+      opacity: unset;
+    }
   }
 `;
 
@@ -54,4 +75,5 @@ CollectionItem.Title = styled.span`
 
 CollectionItem.Text = styled.span`
   width: 10%;
+  text-align: right;
 `;
