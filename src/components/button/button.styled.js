@@ -61,4 +61,8 @@ Button.Container = styled.button`
   cursor: pointer;
 
   ${getStyles}
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;

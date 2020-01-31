@@ -15,7 +15,10 @@ const Header = () => {
 
   return (
     <S.Container>
-      <S.Logo to='/'>Placeholder</S.Logo>
+      <S.Logo to='/'>
+        <S.LogoNumber>4</S.LogoNumber>
+        <S.LogoText>SEASONS</S.LogoText>
+      </S.Logo>
       <S.Options>
         <S.Option to='/collection'>COLLECTION</S.Option>
         <S.Option to='/contact'>CONTACT</S.Option>

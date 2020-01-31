@@ -6,6 +6,10 @@ SignIn.Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 440px;
+
+  @media screen and (max-width: 800px) {
+    width: 300px;
+  }
 `;
 
 SignIn.Title = styled.h2`
@@ -15,4 +19,8 @@ SignIn.Title = styled.h2`
 SignIn.ButtonsContainer = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 800px) {
+    display: block;
+  }
 `;

@@ -16,6 +16,10 @@ CartDropdown.Container = styled.div`
   top: 80px;
   right: 0;
   z-index: 5;
+
+  @media screen and (max-width: 800px) {
+    top: 120px;
+  }
 `;
 
 CartDropdown.Items = styled.div`

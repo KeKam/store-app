@@ -11,21 +11,23 @@ Header.Container = styled.div`
   margin-bottom: 25px;
 
   @media screen and (max-width: 800px) {
+    display: block;
     height: 60px;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
 `;
 
 Header.Logo = styled(Link)`
+  display: flex;
+  align-items: center;
   height: 100%;
-  width: 70px;
-  padding: 25px;
-  border: 1px solid black;
+  width: 50%;
 
   @media screen and (max-width: 800px) {
-    width: 50px;
-    padding: 0;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px
   }
 `;
 
@@ -37,11 +39,31 @@ Header.Options = styled.div`
   height: 100%;
 
   @media screen and (max-width: 800px) {
-    width: 80%;
+    width: 100%;
+    justify-content: center;
   }
 `;
 
 Header.Option = styled(Link)`
   padding: 10px 15px;
   cursor: pointer;
+
+  @media screen and (max-width: 800px) {
+    font-size: 12px;
+  }
+`;
+
+Header.LogoText = styled.div`
+  @import url('https://fonts.googleapis.com/css?family=Gruppo&display=swap');
+  font-size: 30px;
+  font-family: 'Gruppo', cursive;
+  font-weight: bold;
+  padding: 10px 0;
+`;
+
+Header.LogoNumber = styled(Header.LogoText)`
+  font-size: 35px;
+  font-family: 'Courgette', cursive;
+  font-weight: bold;
+  margin-right: 5px;
 `;
