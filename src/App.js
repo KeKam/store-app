@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import Header from './components/header/header';
 import Spinner from './components/spinner/spinner';
+import ErrorBoundary from './components/error-boundary/error-boundary';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
 import { GlobalStyle } from './components/global-styles/global-style';
@@ -31,16 +32,18 @@ const App = () => {
       <GlobalStyle />
       <Header />
       <Switch>
-        <Suspense fallback={<Spinner />}>
-          <Route exact path='/' component={HomePage} />
-          <Route path='/collection' component={CollectionPage} />
-          <Route exact path='/checkout' component={CheckoutPage} />
-          <Route
-            exact
-            path='/login'
-            render={() => (currentUser ? <Redirect to='/' /> : <LoginPage />)}
-          />
-        </Suspense>
+        <ErrorBoundary>
+          <Suspense fallback={<Spinner />}>
+            <Route exact path='/' component={HomePage} />
+            <Route path='/collection' component={CollectionPage} />
+            <Route exact path='/checkout' component={CheckoutPage} />
+            <Route
+              exact
+              path='/login'
+              render={() => (currentUser ? <Redirect to='/' /> : <LoginPage />)}
+            />
+          </Suspense>
+        </ErrorBoundary>
       </Switch>
     </div>
   );
