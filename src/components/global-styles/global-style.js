@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css?family=Gruppo&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
 
   * {
@@ -8,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    font-family: 'Gruppo', cursive;
     padding: 20px 60px;
 
     @media screen and (max-width: 800px) {

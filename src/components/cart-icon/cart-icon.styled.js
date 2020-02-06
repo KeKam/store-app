@@ -23,5 +23,5 @@ CartIcon.Number = styled.span`
   position: absolute;
   font-size: 13px;
   font-weight: bold;
-  bottom: 10px;
+  bottom: 12px;
 `;

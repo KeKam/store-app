@@ -8,6 +8,7 @@ CartDropdown.Container = styled.div`
   display: flex;
   flex-direction: column;
   position: absolute;
+  font-weight: bold;
   width: 290px;
   height: 340px;
   padding: 20px;

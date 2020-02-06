@@ -37,7 +37,6 @@ FormInput.Input = styled.input`
 FormInput.Label = styled.label`
   position: absolute;
   font-size: ${props => (props.value.length ? '12px' : '16px')};
-  font-weight: normal;
   color: grey;
   pointer-events: none;
   left: 5px;

@@ -27,7 +27,7 @@ Header.Logo = styled(Link)`
   @media screen and (max-width: 800px) {
     width: 100%;
     justify-content: center;
-    margin-bottom: 10px
+    margin-bottom: 10px;
   }
 `;
 
@@ -45,16 +45,18 @@ Header.Options = styled.div`
 `;
 
 Header.Option = styled(Link)`
+  font-weight: bold;
+  letter-spacing: 5px;
   padding: 10px 15px;
   cursor: pointer;
 
   @media screen and (max-width: 800px) {
     font-size: 12px;
+    letter-spacing: 0;
   }
 `;
 
 Header.LogoText = styled.div`
-  @import url('https://fonts.googleapis.com/css?family=Gruppo&display=swap');
   font-size: 30px;
   font-family: 'Gruppo', cursive;
   font-weight: bold;

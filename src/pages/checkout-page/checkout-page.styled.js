@@ -16,13 +16,13 @@ CheckoutPage.Container = styled.div`
   }
 
   @media screen and (max-width: 800px) {
-    width: 90%;
+    width: 95%;
   }
 `;
 
 CheckoutPage.Header = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   height: 40px;
   border-bottom: 1px solid darkgrey;
@@ -30,14 +30,16 @@ CheckoutPage.Header = styled.div`
 
 CheckoutPage.Block = styled.div`
   width: 23%;
+  font-weight: bold;
 
   &:last-child {
     width: 8%;
   }
 
   @media screen and (max-width: 800px) {
+    font-size: 14px;
     width: 22%;
-    margin: 0 7px;
+    margin: 0 10px;
 
     &:last-child {
       width: 12%;
@@ -47,13 +49,23 @@ CheckoutPage.Block = styled.div`
 
 CheckoutPage.TotalContainer = styled.div`
   font-size: 36px;
+  font-weight: bold;
   margin-top: 30px;
   margin-left: auto;
+
+  @media screen and (max-width: 800px) {
+    font-size: 28px;
+  }
 `;
 
 CheckoutPage.Warning = styled.div`
   color: red;
   font-size: 24px;
+  font-weight: bold;
   text-align: center;
   margin-top: 40px;
+
+  @media screen and (max-width: 800px) {
+    font-size: 20px;
+  }
 `;

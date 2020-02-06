@@ -6,10 +6,15 @@ CheckoutItem.Container = styled.div`
   display: flex;
   align-items: center;
   font-size: 20px;
+  font-weight: bold;
   width: 100%;
   min-height: 100px;
   padding: 15px 0;
   border-bottom: 1px solid darkgrey;
+
+  @media screen and (max-width: 800px) {
+    font-size: 17px;
+  }
 `;
 
 CheckoutItem.ImageContainer = styled.div`
@@ -23,15 +28,26 @@ CheckoutItem.Image = styled.img`
 `;
 
 CheckoutItem.Text = styled.span`
-  width: 23%;
+  width: 24%;
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    justify-content: center;
+    width: 22%;
+  }
 `;
 
 CheckoutItem.QuantityContainer = styled(CheckoutItem.Text)`
   display: flex;
-  padding-left: 20px;
 
   span {
     margin: 0 10px;
+  }
+
+  @media screen and (max-width: 800px) {
+    span {
+      margin: 0 5px;
+    }
   }
 `;
 

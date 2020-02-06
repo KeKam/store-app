@@ -47,6 +47,7 @@ export const Button = () => {};
 Button.Container = styled.button`
   display: flex;
   justify-content: center;
+  font-family: 'Gruppo', cursive;
   font-size: 15px;
   width: auto;
   min-width: 165px;
@@ -56,7 +57,7 @@ Button.Container = styled.button`
   padding: 0 35px 0 35px;
   color: white;
   text-transform: uppercase;
-  font-weight: bolder;
+  font-weight: bold;
   border: none;
   cursor: pointer;
 

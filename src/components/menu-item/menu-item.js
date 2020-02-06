@@ -11,7 +11,7 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
     <S.Image imageUrl={imageUrl} />
     <S.Content>
       <S.Title>{title.toUpperCase()}</S.Title>
-      <S.Subtitle>Placeholder</S.Subtitle>
+      <S.Subtitle>SEE COLLECTION</S.Subtitle>
     </S.Content>
   </S.Container>
 );

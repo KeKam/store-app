@@ -5,8 +5,8 @@ export const MenuItem = () => {};
 MenuItem.Container = styled.div`
   display: flex;
   justify-content: center;
-  min-width: 30%;
-  height: ${({ size }) => (size ? '380px' : '300px')};
+  min-width: 45%;
+  height: 380px;
   flex: 1 1 auto;
   align-items: center;
   border: 1px solid black;
@@ -27,6 +27,7 @@ MenuItem.Container = styled.div`
 
   @media screen and (max-width: 800px) {
     height: 200px;
+    min-width: 50%;
   }
 `;
 
@@ -55,10 +56,11 @@ MenuItem.Content = styled.div`
   flex-direction: column;
   justify-content: center;
   height: 90px;
-  padding: 0 25px;
+  padding: 0 45px;
   align-items: center;
   border: 1px solid black;
   background: white;
+  color: #4a4a4a;
   opacity: 0.7;
   position: absolute;
 
@@ -68,11 +70,9 @@ MenuItem.Content = styled.div`
 
   @media screen and (max-width: 800px) {
     height: 80px;
-    padding: 0 4px;
-
-    ${MenuItem.Container}:hover & {
-      opacity: 0.7;
-    }
+    padding: 0 15px;
+    color: black;
+    opacity: 0.9;
   }
 `;
 
@@ -88,5 +88,5 @@ MenuItem.Title = styled.div`
 
 MenuItem.Subtitle = styled.div`
   font-size: 16px;
-  font-weight: lighter;
+  font-weight: bold;
 `;

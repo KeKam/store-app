@@ -13,7 +13,7 @@ CollectionItem.Container = styled.div`
   position: relative;
 
   @media screen and (max-width: 800px) {
-    width: 40vw;
+    width: 70vw;
   }
 `;
 
@@ -71,9 +71,11 @@ CollectionItem.Button = styled(Button)`
 CollectionItem.Title = styled.span`
   width: 90%;
   margin-bottom: 15px;
+  font-weight: bold;
 `;
 
 CollectionItem.Text = styled.span`
   width: 10%;
   text-align: right;
+  font-weight: bold;
 `;
