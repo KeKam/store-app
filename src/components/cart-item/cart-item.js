@@ -4,7 +4,7 @@ import { CartItem as S } from './cart-item.styled';
 
 const CartItem = ({ item: { imageUrl, name, price, quantity } }) => (
   <S.Container>
-    <S.Image src={imageUrl} alt={name.toString()} />
+    <S.Image src={imageUrl} alt='item' />
     <S.Details>
       <S.Text>{name}</S.Text>
       <S.Text>
@@ -14,4 +14,4 @@ const CartItem = ({ item: { imageUrl, name, price, quantity } }) => (
   </S.Container>
 );
 
-export default CartItem;
+export default React.memo(CartItem);
