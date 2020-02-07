@@ -31,6 +31,7 @@ CheckoutPage.Header = styled.div`
 CheckoutPage.Block = styled.div`
   width: 23%;
   font-weight: bold;
+  color: #e8eaed;
 
   &:last-child {
     width: 8%;
@@ -52,6 +53,7 @@ CheckoutPage.TotalContainer = styled.div`
   font-weight: bold;
   margin-top: 30px;
   margin-left: auto;
+  color: #e8eaed;
 
   @media screen and (max-width: 800px) {
     font-size: 28px;

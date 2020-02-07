@@ -1,31 +1,31 @@
 import styled, { css } from 'styled-components';
 
 const normalStyles = css`
-  color: white;
+  color: #e8eaed;
   background-color: black;
   border: none;
 
   &:hover {
     color: black;
-    background-color: white;
+    background-color: #e8eaed;
     border: 1px solid black;
   }
 `;
 
 const invertedStyles = css`
   color: black;
-  background-color: white;
+  background-color: #e8eaed;
   border: 1px solid black;
 
   &:hover {
-    color: white;
+    color: #e8eaed;
     background-color: black;
     border: none;
   }
 `;
 
 const googleStyles = css`
-  color: white;
+  color: #e8eaed;
   background-color: #4285f4;
 
   &:hover {
@@ -55,7 +55,7 @@ Button.Container = styled.button`
   letter-spacing: 0.5px;
   line-height: 50px;
   padding: 0 35px 0 35px;
-  color: white;
+  color: #e8eaed;
   text-transform: uppercase;
   font-weight: bold;
   border: none;

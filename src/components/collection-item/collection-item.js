@@ -13,7 +13,7 @@ const CollectionItem = ({ item }) => {
       <S.Image imageUrl={imageUrl} />
       <S.Footer>
         <S.Title>{name}</S.Title>
-        <S.Text>{price}</S.Text>
+        <S.Text>{price} €</S.Text>
       </S.Footer>
       <S.Button onClick={() => dispatch(addToCart(item))}>ADD TO CART</S.Button>
     </S.Container>

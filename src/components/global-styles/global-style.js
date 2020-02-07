@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    background-color: #202124;
     font-family: 'Gruppo', cursive;
     padding: 20px 60px;
 

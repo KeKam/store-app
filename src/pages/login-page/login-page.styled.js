@@ -8,6 +8,7 @@ LoginPage.Container = styled.div`
   width: 850px;
   margin: 30px auto;
   font-weight: bold;
+  color: #e8eaed;
 
   @media screen and (max-width: 800px) {
     flex-direction: column;

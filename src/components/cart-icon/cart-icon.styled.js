@@ -17,11 +17,13 @@ CartIcon.Container = styled.div`
 CartIcon.ShoppingBag = styled(ShoppingBagIcon)`
   width: 30px;
   height: 30px;
+  fill: #e8eaed;
 `;
 
 CartIcon.Number = styled.span`
   position: absolute;
   font-size: 13px;
   font-weight: bold;
+  color: #e8eaed;
   bottom: 12px;
 `;

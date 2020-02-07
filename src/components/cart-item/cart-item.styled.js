@@ -11,6 +11,7 @@ CartItem.Container = styled.div`
 
 CartItem.Image = styled.img`
   width: 35%;
+  border: 1px solid #e8eaed;
 `;
 
 CartItem.Details = styled.div`
@@ -23,5 +24,6 @@ CartItem.Details = styled.div`
 `;
 
 CartItem.Text = styled.span`
+  color: #e8eaed;
   margin-bottom: 5px;
 `;

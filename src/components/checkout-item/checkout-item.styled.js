@@ -25,10 +25,12 @@ CheckoutItem.ImageContainer = styled.div`
 CheckoutItem.Image = styled.img`
   width: 100%;
   height: 100%;
+  border: 1px solid #e8eaed;
 `;
 
 CheckoutItem.Text = styled.span`
   width: 24%;
+  color: #e8eaed;
 
   @media screen and (max-width: 800px) {
     display: flex;
@@ -39,6 +41,7 @@ CheckoutItem.Text = styled.span`
 
 CheckoutItem.QuantityContainer = styled(CheckoutItem.Text)`
   display: flex;
+  color: #e8eaed;
 
   span {
     margin: 0 10px;
@@ -57,5 +60,6 @@ CheckoutItem.Arrow = styled.div`
 
 CheckoutItem.Button = styled.div`
   padding-left: 12px;
+  color: #e8eaed;
   cursor: pointer;
 `;

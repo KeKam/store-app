@@ -9,7 +9,7 @@ MenuItem.Container = styled.div`
   height: 380px;
   flex: 1 1 auto;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid #e8eaed;
   margin: 0 7.5px 15px;
   overflow: hidden;
 
@@ -58,9 +58,9 @@ MenuItem.Content = styled.div`
   height: 90px;
   padding: 0 45px;
   align-items: center;
-  border: 1px solid black;
-  background: white;
-  color: #4a4a4a;
+  border: 1px solid #e8eaed;
+  background: #202124;
+  color: #e8eaed;
   opacity: 0.7;
   position: absolute;
 
@@ -71,7 +71,6 @@ MenuItem.Content = styled.div`
   @media screen and (max-width: 800px) {
     height: 80px;
     padding: 0 15px;
-    color: black;
     opacity: 0.9;
   }
 `;

@@ -22,6 +22,7 @@ CollectionItem.Image = styled.div`
   height: 95%;
   background-size: cover;
   background-position: center;
+  border: 1px solid #e8eaed;
   margin-bottom: 5px;
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
 
@@ -72,10 +73,12 @@ CollectionItem.Title = styled.span`
   width: 90%;
   margin-bottom: 15px;
   font-weight: bold;
+  color: #e8eaed;
 `;
 
 CollectionItem.Text = styled.span`
-  width: 10%;
+  width: 15%;
   text-align: right;
   font-weight: bold;
+  color: #e8eaed;
 `;

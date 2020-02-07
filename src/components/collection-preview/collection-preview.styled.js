@@ -14,6 +14,7 @@ CollectionPreview.Container = styled.div`
 
 CollectionPreview.Title = styled.h1`
   font-size: 28px;
+  color: #e8eaed;
   margin-bottom: 25px;
   cursor: pointer;
 

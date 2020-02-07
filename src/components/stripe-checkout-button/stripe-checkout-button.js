@@ -13,7 +13,7 @@ const StripeCheckoutButton = ({ price }) => {
   return (
     <StripeCheckout
       label='Pay Now'
-      name='Placeholder'
+      name='4 Seasons Ltd.'
       billingAddress
       shippingAddress
       description={`Your total is ${price} €`}

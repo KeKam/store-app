@@ -13,7 +13,7 @@ CartDropdown.Container = styled.div`
   height: 340px;
   padding: 20px;
   border: 1px solid black;
-  background-color: white;
+  background-color: #363739;
   top: 80px;
   right: 0;
   z-index: 5;
@@ -27,11 +27,13 @@ CartDropdown.Items = styled.div`
   display: flex;
   flex-direction: column;
   height: 240px;
-  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
 `;
 
 CartDropdown.Text = styled.span`
   font-size: 18px;
+  color: #e8eaed;
   margin: 50px auto;
 `;
 

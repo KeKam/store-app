@@ -19,8 +19,10 @@ Header.Container = styled.div`
 `;
 
 Header.Logo = styled(Link)`
+  color: #e8eaed;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #e8eaed;
   height: 100%;
   width: 50%;
 
@@ -28,6 +30,7 @@ Header.Logo = styled(Link)`
     width: 100%;
     justify-content: center;
     margin-bottom: 10px;
+    border-bottom: none;
   }
 `;
 
@@ -35,6 +38,7 @@ Header.Options = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  border-bottom: 1px solid #e8eaed;
   width: 50%;
   height: 100%;
 
@@ -45,8 +49,9 @@ Header.Options = styled.div`
 `;
 
 Header.Option = styled(Link)`
+  color: #e8eaed;
   font-weight: bold;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   padding: 10px 15px;
   cursor: pointer;
 
