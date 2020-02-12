@@ -11,7 +11,7 @@ CartItem.Container = styled.div`
 
 CartItem.Image = styled.img`
   width: 35%;
-  border: 1px solid #e8eaed;
+  border: 1px groove #e8eaed;
 `;
 
 CartItem.Details = styled.div`

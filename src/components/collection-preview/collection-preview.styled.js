@@ -17,6 +17,7 @@ CollectionPreview.Title = styled.h1`
   color: #e8eaed;
   margin-bottom: 25px;
   cursor: pointer;
+  letter-spacing: 4px;
 
   &:hover {
     color: grey;

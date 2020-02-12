@@ -22,7 +22,7 @@ Header.Logo = styled(Link)`
   color: #e8eaed;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #e8eaed;
+  border-bottom: 1px groove #e8eaed;
   height: 100%;
   width: 50%;
 
@@ -38,7 +38,7 @@ Header.Options = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  border-bottom: 1px solid #e8eaed;
+  border-bottom: 1px groove #e8eaed;
   width: 50%;
   height: 100%;
 
@@ -56,7 +56,7 @@ Header.Option = styled(Link)`
   cursor: pointer;
 
   @media screen and (max-width: 800px) {
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 0;
   }
 `;

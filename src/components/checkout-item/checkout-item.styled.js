@@ -10,7 +10,7 @@ CheckoutItem.Container = styled.div`
   width: 100%;
   min-height: 100px;
   padding: 15px 0;
-  border-bottom: 1px solid darkgrey;
+  border-bottom: 1px groove darkgrey;
 
   @media screen and (max-width: 800px) {
     font-size: 17px;
@@ -25,7 +25,7 @@ CheckoutItem.ImageContainer = styled.div`
 CheckoutItem.Image = styled.img`
   width: 100%;
   height: 100%;
-  border: 1px solid #e8eaed;
+  border: 1px groove #e8eaed;
 `;
 
 CheckoutItem.Text = styled.span`

@@ -25,7 +25,11 @@ CheckoutPage.Header = styled.div`
   justify-content: space-evenly;
   width: 100%;
   height: 40px;
-  border-bottom: 1px solid darkgrey;
+  border-bottom: 1px groove darkgrey;
+
+  @media screen and (max-width: 800px) {
+    margin-top: 18.76px;
+  }
 `;
 
 CheckoutPage.Block = styled.div`
@@ -49,7 +53,7 @@ CheckoutPage.Block = styled.div`
 `;
 
 CheckoutPage.TotalContainer = styled.div`
-  font-size: 36px;
+  font-size: 30px;
   font-weight: bold;
   margin-top: 30px;
   margin-left: auto;
@@ -70,4 +74,11 @@ CheckoutPage.Warning = styled.div`
   @media screen and (max-width: 800px) {
     font-size: 20px;
   }
+`;
+
+CheckoutPage.Text = styled.span`
+  font-size: 18px;
+  color: #e8eaed;
+  margin: 50px auto;
+  font-weight: bold;
 `;

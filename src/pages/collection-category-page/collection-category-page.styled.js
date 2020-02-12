@@ -9,9 +9,10 @@ CollectionCategoryPage.Container = styled.div`
 `;
 
 CollectionCategoryPage.Title = styled.h2`
-  font-size: 38px;
-  margin: 0 auto 30px;
+  font-size: 28px;
+  margin: 18.76px auto 30px;
   color: #e8eaed;
+  letter-spacing: 4px;
 `;
 
 CollectionCategoryPage.Items = styled.div`

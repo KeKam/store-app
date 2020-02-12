@@ -9,6 +9,10 @@ FormInput.Container = styled.div`
   input[type='password'] {
     letter-spacing: 0.3em;
   }
+
+  @media screen and (max-width: 800px) {
+    margin: 25px 0;
+  }
 `;
 
 FormInput.Input = styled.input`
@@ -31,6 +35,10 @@ FormInput.Input = styled.input`
     top: -14px;
     font-size: 12px;
     color: grey;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: 5px 5px 5px 2.5px;
   }
 `;
 

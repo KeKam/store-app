@@ -11,6 +11,7 @@ CollectionItem.Container = styled.div`
   width: 22vw;
   height: 350px;
   position: relative;
+  margin: 0px 10px;
 
   @media screen and (max-width: 800px) {
     width: 70vw;
@@ -22,7 +23,7 @@ CollectionItem.Image = styled.div`
   height: 95%;
   background-size: cover;
   background-position: center;
-  border: 1px solid #e8eaed;
+  border: 1px groove #e8eaed;
   margin-bottom: 5px;
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
 

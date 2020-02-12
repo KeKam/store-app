@@ -9,7 +9,7 @@ MenuItem.Container = styled.div`
   height: 380px;
   flex: 1 1 auto;
   align-items: center;
-  border: 1px solid #e8eaed;
+  border: 1px groove #e8eaed;
   margin: 0 7.5px 15px;
   overflow: hidden;
 
@@ -58,7 +58,7 @@ MenuItem.Content = styled.div`
   height: 90px;
   padding: 0 45px;
   align-items: center;
-  border: 1px solid #e8eaed;
+  border: 1px groove #e8eaed;
   background: #202124;
   color: #e8eaed;
   opacity: 0.7;
@@ -79,6 +79,7 @@ MenuItem.Title = styled.div`
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 6px;
+  letter-spacing: 4px;
 
   @media screen and (max-width: 800px) {
     font-size: 18px;
@@ -88,4 +89,5 @@ MenuItem.Title = styled.div`
 MenuItem.Subtitle = styled.div`
   font-size: 16px;
   font-weight: bold;
+  letter-spacing: 4px;
 `;

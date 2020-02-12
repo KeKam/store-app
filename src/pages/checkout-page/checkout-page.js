@@ -32,9 +32,13 @@ const CheckoutPage = () => {
           <span>Remove</span>
         </S.Block>
       </S.Header>
-      {cartItems.map(cartItem => (
-        <CheckoutItem key={cartItem.id} cartItem={cartItem} />
-      ))}
+      {cartItems.length ? (
+        cartItems.map(cartItem => (
+          <CheckoutItem key={cartItem.id} cartItem={cartItem} />
+        ))
+      ) : (
+        <S.Text>You have no added items</S.Text>
+      )}
       <S.TotalContainer>
         <span>TOTAL : {cartTotal} €</span>
       </S.TotalContainer>
