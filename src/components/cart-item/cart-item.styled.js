@@ -27,3 +27,12 @@ CartItem.Text = styled.span`
   color: #e8eaed;
   margin-bottom: 5px;
 `;
+
+CartItem.RemoveButton = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  color: #e8eaed;
+  cursor: pointer;
+`;
