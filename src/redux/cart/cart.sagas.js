@@ -4,11 +4,16 @@ import UserActionTypes from '../user/user.types';
 import CartActionTypes from './cart.types';
 import { getCurrentUserCart } from '../../firebase/firebase';
 import { selectCurrentUser } from '../user/user.selectors';
-import { selectCartItems } from './cart.selectors';
-import { clearCart, setCartFromFirebase } from './cart.actions';
+import { selectCartItems, selectCartHidden } from './cart.selectors';
+import { clearCart, setCartFromFirebase, toggleCart } from './cart.actions';
 
 export function* clearCartOnSignOut() {
+  const hidden = yield select(selectCartHidden);
   yield put(clearCart());
+
+  if (!hidden) {
+    yield put(toggleCart());
+  }
 }
 
 export function* updateCartInFirebase() {
