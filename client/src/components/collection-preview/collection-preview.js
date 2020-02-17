@@ -6,7 +6,9 @@ import { CollectionPreview as S } from './collection-preview.styled';
 
 const CollectionPreview = ({ title, items, history, match, routeName }) => (
   <S.Container>
-    <S.Title onClick={() => history.push(`${match.path}/${routeName}`)}>{title.toUpperCase()}</S.Title>
+    <S.Title onClick={() => history.push(`${match.path}/${routeName}`)}>
+      {title.toUpperCase()}
+    </S.Title>
     <S.Preview>
       {items
         .filter((item, idx) => idx < 4)

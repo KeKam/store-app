@@ -9,6 +9,6 @@ SignUp.Container = styled.div`
 `;
 
 SignUp.Title = styled.h2`
-display: flex;
+  display: flex;
   margin: 10px 0;
 `;
