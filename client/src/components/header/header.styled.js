@@ -7,7 +7,7 @@ Header.Container = styled.div`
   display: flex;
   justify-content: space-between;
   padding: ${props => (props.hasScrolledDown ? '0px' : '20px 60px 0px 60px')};
-  transition: all 0.5s ;
+  transition: all 0.5s ease;
   top: 0;
   z-index: 1;
   position: fixed;
