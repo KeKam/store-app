@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { startFetchCollection } from '../../redux/collection/collection.actions';
 import CollectionOverview from '../../components/collection-overview/collection-overview';
 import CollectionCategoryPage from '../collection-category-page/collection-category-page';
+import { CollectionPage as S } from './collection-page.styled';
 
 const CollectionPage = ({ match }) => {
   const dispatch = useDispatch();
@@ -14,13 +15,13 @@ const CollectionPage = ({ match }) => {
   }, [dispatch]);
 
   return (
-    <div>
+    <S.Container>
       <Route exact path={`${match.path}`} component={CollectionOverview} />
       <Route
         path={`${match.path}/:categoryId`}
         component={CollectionCategoryPage}
       />
-    </div>
+    </S.Container>
   );
 };
 

@@ -28,9 +28,9 @@ const CheckoutItem = ({ cartItem }) => {
         </S.Arrow>
       </S.QuantityContainer>
       <S.Text>{price} €</S.Text>
-      <S.Button onClick={() => dispatch(removeItem(cartItem))}>
+      <S.RemoveButton onClick={() => dispatch(removeItem(cartItem))}>
         &#10005;
-      </S.Button>
+      </S.RemoveButton>
     </S.Container>
   );
 };

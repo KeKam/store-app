@@ -15,12 +15,20 @@ CollectionPreview.Container = styled.div`
 CollectionPreview.Title = styled.h1`
   font-size: 28px;
   color: #e8eaed;
+  width: 10%;
   margin-bottom: 25px;
   cursor: pointer;
   letter-spacing: 4px;
+  transition: all 0.5s ease;
 
   &:hover {
     color: grey;
+  }
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    justify-content: center;
+    width: 50%;
   }
 `;
 

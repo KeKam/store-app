@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { ReactComponent as ShoppingBagIcon } from '../../assets/shopping-bag.svg';
+import { ReactComponent as ShoppingBagExtendedIcon } from '../../assets/shopping-bag-extended.svg';
 
 export const CartIcon = () => {};
 
@@ -11,19 +12,28 @@ CartIcon.Container = styled.div`
   position: relative;
   width: 45px;
   height: 45px;
+  margin-right: ${props => (props.hasScrolledDown ? '25px' : '0px')};
   cursor: pointer;
+
+  @media screen and (max-width: 800px) {
+    margin-right: 0;
+  }
 `;
 
 CartIcon.ShoppingBag = styled(ShoppingBagIcon)`
   width: 30px;
   height: 30px;
-  fill: #e8eaed;
+`;
+
+CartIcon.ShoppingBagExtended = styled(ShoppingBagExtendedIcon)`
+  width: 30px;
+  height: 30px;
 `;
 
 CartIcon.Number = styled.span`
   position: absolute;
   font-size: 13px;
   font-weight: bold;
-  color: #e8eaed;
+  color: ${props => (props.hasScrolledDown ? '#202124' : '#e8eaed')};
   bottom: 12px;
 `;

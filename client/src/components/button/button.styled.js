@@ -59,6 +59,7 @@ Button.Container = styled.button`
   text-transform: uppercase;
   font-weight: bold;
   border: none;
+  transition: all 0.5s ease;
   cursor: pointer;
 
   ${getStyles}

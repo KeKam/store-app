@@ -10,7 +10,7 @@ CollectionCategoryPage.Container = styled.div`
 
 CollectionCategoryPage.Title = styled.h2`
   font-size: 28px;
-  margin: 18.76px auto 30px;
+  margin: 18.76px auto 25px;
   color: #e8eaed;
   letter-spacing: 4px;
 `;
@@ -27,5 +27,9 @@ CollectionCategoryPage.Items = styled.div`
   @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
     grid-gap: 15px;
+
+    & > div {
+      margin-bottom: 0px;
+    }
   }
 `;

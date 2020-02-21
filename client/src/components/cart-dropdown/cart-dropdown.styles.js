@@ -14,12 +14,12 @@ CartDropdown.Container = styled.div`
   padding: 20px;
   border: 1px solid black;
   background-color: #363739;
-  top: 80px;
+  top: 70px;
   right: 0;
   z-index: 5;
 
   @media screen and (max-width: 800px) {
-    top: 120px;
+    top: 90px;
   }
 `;
 

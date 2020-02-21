@@ -20,7 +20,7 @@ CartItem.Details = styled.div`
   align-items: flex-start;
   justify-content: center;
   width: 70%;
-  padding: 10px 20px;
+  padding: 10px;
 `;
 
 CartItem.Text = styled.span`
@@ -34,5 +34,10 @@ CartItem.RemoveButton = styled.div`
   align-items: center;
   margin-right: 15px;
   color: #e8eaed;
+  transition: all 0.5s ease;
   cursor: pointer;
+
+  &:hover {
+    color: grey;
+  }
 `;

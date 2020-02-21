@@ -6,7 +6,7 @@ LoginPage.Container = styled.div`
   display: flex;
   justify-content: space-between;
   width: 850px;
-  margin: 30px auto;
+  margin: 130px auto;
   font-weight: bold;
   color: #e8eaed;
 
@@ -14,6 +14,7 @@ LoginPage.Container = styled.div`
     flex-direction: column;
     width: unset;
     align-items: center;
+    padding: 0px 10px;
 
     > *:first-child {
       margin-bottom: 50px;

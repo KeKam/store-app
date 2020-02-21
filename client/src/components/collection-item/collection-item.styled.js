@@ -26,6 +26,7 @@ CollectionItem.Image = styled.div`
   border: 1px groove #e8eaed;
   margin-bottom: 5px;
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+  transition: all 0.5s ease;
 
   ${CollectionItem.Container}:hover & {
     opacity: 0.7;

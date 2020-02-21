@@ -63,6 +63,7 @@ MenuItem.Content = styled.div`
   color: #e8eaed;
   opacity: 0.7;
   position: absolute;
+  transition: all 0.5s ease;
 
   ${MenuItem.Container}:hover & {
     opacity: 0.9;

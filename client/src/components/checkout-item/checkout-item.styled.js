@@ -55,11 +55,21 @@ CheckoutItem.QuantityContainer = styled(CheckoutItem.Text)`
 `;
 
 CheckoutItem.Arrow = styled.div`
+  transition: all 0.5s ease;
   cursor: pointer;
+
+  &:hover {
+    color: grey;
+  }
 `;
 
-CheckoutItem.Button = styled.div`
+CheckoutItem.RemoveButton = styled.div`
   padding-left: 12px;
   color: #e8eaed;
+  transition: all 0.5s ease;
   cursor: pointer;
+
+  &:hover {
+    color: grey;
+  }
 `;

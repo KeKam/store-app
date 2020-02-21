@@ -8,7 +8,7 @@ CheckoutPage.Container = styled.div`
   align-items: center;
   width: 55%;
   min-height: 90vh;
-  margin: 50px auto 0;
+  margin: 120px auto 0;
 
   button {
     margin-top: 50px;
@@ -17,6 +17,8 @@ CheckoutPage.Container = styled.div`
 
   @media screen and (max-width: 800px) {
     width: 95%;
+    margin: 100px auto 0;
+    padding: 0px 10px 10px 10px;
   }
 `;
 
