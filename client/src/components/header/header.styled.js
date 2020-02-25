@@ -15,6 +15,10 @@ Header.Container = styled.div`
   width: 100%;
   margin-bottom: 25px;
 
+  a {
+    color: ${props => (props.hasScrolledDown ? '#202124' : '#e8eaed')};
+  }
+
   @media screen and (max-width: 800px) {
     display: block;
     height: 60px;
@@ -59,7 +63,6 @@ Header.Options = styled.div`
 `;
 
 Header.Option = styled(Link)`
-  color: ${props => (props.hasScrolledDown ? '#202124' : '#e8eaed')};
   font-weight: bold;
   letter-spacing: 4px;
   padding: 10px 15px;
@@ -79,7 +82,6 @@ Header.Option = styled(Link)`
 Header.Logo = styled(Link)`
   display: flex;
   align-items: center;
-  color: ${props => (props.hasScrolledDown ? '#202124' : '#e8eaed')};
   transition: all 0.5s ease;
 
   &:hover {
@@ -101,7 +103,6 @@ Header.LogoNumber = styled.div`
   padding: 10px 0;
   margin: ${props =>
     props.hasScrolledDown ? '0px 5px 0px 25px' : '0px 5px 0px 0px'};
-
   @media screen and (max-width: 800px) {
     margin: 0px 5px 0px 0px;
   }

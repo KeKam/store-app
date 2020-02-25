@@ -17,11 +17,7 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', onScrollDown);
-
-    return () => {
-      window.removeEventListener('scroll', onScrollDown);
-    };
-  });
+  }, []);
 
   const closeCart = () => {
     if (!hidden) {
@@ -38,42 +34,25 @@ const Header = () => {
 
   return (
     <S.Container hasScrolledDown={hasScrolledDown}>
-      <S.LogoContainer hasScrolledDown={hasScrolledDown} onClick={closeCart}>
-        <S.Logo to='/' onClick={closeCart} hasScrolledDown={hasScrolledDown}>
+      <S.LogoContainer hasScrolledDown={hasScrolledDown}>
+        <S.Logo to='/' onClick={closeCart}>
           <S.LogoNumber hasScrolledDown={hasScrolledDown}>4</S.LogoNumber>
           <S.LogoText>SEASONS</S.LogoText>
         </S.Logo>
       </S.LogoContainer>
       <S.Options hasScrolledDown={hasScrolledDown}>
-        <S.Option
-          to='/collection'
-          hasScrolledDown={hasScrolledDown}
-          onClick={closeCart}
-        >
+        <S.Option to='/collection' onClick={closeCart}>
           COLLECTION
         </S.Option>
-        <S.Option
-          to='/contact'
-          hasScrolledDown={hasScrolledDown}
-          onClick={closeCart}
-        >
+        <S.Option to='/contact' onClick={closeCart}>
           CONTACT
         </S.Option>
         {currentUser ? (
-          <S.Option
-            as='div'
-            to=''
-            hasScrolledDown={hasScrolledDown}
-            onClick={() => dispatch(startSignOut())}
-          >
+          <S.Option to='/' onClick={() => dispatch(startSignOut())}>
             SIGN OUT
           </S.Option>
         ) : (
-          <S.Option
-            to='/login'
-            hasScrolledDown={hasScrolledDown}
-            onClick={closeCart}
-          >
+          <S.Option to='/login' onClick={closeCart}>
             SIGN IN
           </S.Option>
         )}

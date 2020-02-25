@@ -4,33 +4,26 @@ const DEFAULT_STATE = {
       title: 'Spring',
       imageUrl: 'https://source.unsplash.com/random/900×700/?kiwi',
       id: 1,
-      linkUrl: ''
+      linkUrl: 'collection/spring'
     },
     {
       title: 'Summer',
       imageUrl: 'https://source.unsplash.com/random/900×700/?pear',
       id: 2,
-      linkUrl: ''
+      linkUrl: 'collection/summer'
     },
     {
       title: 'Autumn',
       imageUrl: 'https://source.unsplash.com/random/900×700/?banana',
       id: 3,
-      linkUrl: ''
+      linkUrl: 'collection/autumn'
     },
     {
       title: 'Winter',
       imageUrl: 'https://source.unsplash.com/random/900×700/?mango',
       id: 4,
-      linkUrl: ''
-    },
-    // {
-    //   title: 'Placeholder',
-    //   imageUrl: 'https://source.unsplash.com/random/900×700/?plum',
-    //   size: 'large',
-    //   id: 5,
-    //   linkUrl: ''
-    // }
+      linkUrl: 'collection/winter'
+    }
   ]
 };
 
