@@ -92,6 +92,20 @@ export const getCurrentUser = () => {
   });
 };
 
+export const saveMessage = async (name, email, description) => {
+  try {
+    const newMessageRef = firestore.collection('messages').doc();
+    await newMessageRef.set({
+      name,
+      email,
+      description
+    });
+    return newMessageRef;
+  } catch (error) {
+    console.log('Failed to send message', error);
+  }
+};
+
 firebase.initializeApp(config);
 
 export const auth = firebase.auth();

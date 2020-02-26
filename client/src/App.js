@@ -11,6 +11,8 @@ import { GlobalStyle } from './components/global-styles/global-style';
 
 const HomePage = lazy(() => import('./pages/homepage/homepage'));
 
+const ContactPage = lazy(() => import('./pages/contact-page/contact-page'));
+
 const CollectionPage = lazy(() =>
   import('./pages/collection-page/collection-page')
 );
@@ -35,6 +37,7 @@ const App = () => {
         <ErrorBoundary>
           <Suspense fallback={<Spinner />}>
             <Route exact path='/' component={HomePage} />
+            <Route exact path='/contact' component={ContactPage} />
             <Route path='/collection' component={CollectionPage} />
             <Route exact path='/checkout' component={CheckoutPage} />
             <Route
