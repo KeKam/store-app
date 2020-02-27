@@ -6,7 +6,8 @@ import Button from '../../components/button/button';
 import Spinner from '../../components/spinner/spinner';
 import {
   selectIsSendingForm,
-  selectFormError
+  selectFormError,
+  selectFormWasSent
 } from '../../redux/form/form.selectors';
 import { startSendForm } from '../../redux/form/form.actions';
 import { ContactPage as S } from './contact-page.styled';
@@ -18,7 +19,8 @@ const ContactPage = () => {
     description: ''
   });
   const isSendingForm = useSelector(selectIsSendingForm);
-  const sendingFailed = useSelector(selectFormError);
+  const formError = useSelector(selectFormError);
+  const formWasSent = useSelector(selectFormWasSent);
   const dispatch = useDispatch();
 
   const { name, email, description } = contactInformation;
@@ -26,6 +28,7 @@ const ContactPage = () => {
   const onSubmit = e => {
     e.preventDefault();
     dispatch(startSendForm({ name, email, description }));
+    resetInputs();
   };
 
   const onInputChange = e => {
@@ -33,51 +36,64 @@ const ContactPage = () => {
     setContactInformation({ ...contactInformation, [name]: value });
   };
 
+  const resetInputs = () => {
+    setContactInformation({ name: '', email: '', description: '' });
+  };
+
   return (
-    <S.Container>
-      {isSendingForm ? (
-        <Spinner />
+    <div>
+      {formWasSent ? (
+        <S.MessageContainer>
+          <S.Message>Message sent</S.Message>
+          <S.Message>We will get back to you soon</S.Message>
+        </S.MessageContainer>
       ) : (
-        <S.FormContainer>
-          <S.Title>Need to contact us?</S.Title>
-          <span>Please use the form below</span>
-          <S.Error>
-            {sendingFailed ? 'Something went wrong, please try again' : null}
-          </S.Error>
+        <S.Container>
+          {isSendingForm ? (
+            <Spinner />
+          ) : (
+            <S.FormContainer>
+              <S.Title>Need to contact us?</S.Title>
+              <span>Please use the form below</span>
+              <S.Error>
+                {formError ? 'Something went wrong, please try again' : null}
+              </S.Error>
 
-          <form onSubmit={onSubmit}>
-            <FormInput
-              name='name'
-              type='text'
-              value={name}
-              onChange={onInputChange}
-              label='Name'
-              required
-            />
-            <FormInput
-              name='email'
-              type='email'
-              value={email}
-              onChange={onInputChange}
-              label='Email'
-              required
-            />
-            <FormInput
-              as='textarea'
-              name='description'
-              type='text'
-              value={description}
-              onChange={onInputChange}
-              rows='5'
-              label='Description'
-              required
-            />
+              <form onSubmit={onSubmit}>
+                <FormInput
+                  name='name'
+                  type='text'
+                  value={name}
+                  onChange={onInputChange}
+                  label='Name'
+                  required
+                />
+                <FormInput
+                  name='email'
+                  type='email'
+                  value={email}
+                  onChange={onInputChange}
+                  label='Email'
+                  required
+                />
+                <FormInput
+                  as='textarea'
+                  name='description'
+                  type='text'
+                  value={description}
+                  onChange={onInputChange}
+                  rows='5'
+                  label='Description'
+                  required
+                />
 
-            <Button type='submit'> SEND </Button>
-          </form>
-        </S.FormContainer>
+                <Button type='submit'> SEND </Button>
+              </form>
+            </S.FormContainer>
+          )}
+        </S.Container>
       )}
-    </S.Container>
+    </div>
   );
 };
 

@@ -1,7 +1,7 @@
 import FormActionTypes from './form.types';
 
 const DEFAULT_STATE = {
-  form: null,
+  formWasSent: null,
   isSending: false,
   error: null
 };
@@ -17,7 +17,7 @@ const formReducer = (state = DEFAULT_STATE, action) => {
     case FormActionTypes.SEND_FORM_SUCCESS:
       return {
         ...state,
-        form: action.payload,
+        formWasSent: action.payload,
         isSending: false,
         error: null
       };
@@ -27,6 +27,8 @@ const formReducer = (state = DEFAULT_STATE, action) => {
         error: action.payload,
         isSending: false
       };
+    case FormActionTypes.RESET_FORM_AFTER_SUCCESS:
+      return DEFAULT_STATE;
     default:
       return state;
   }

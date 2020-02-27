@@ -8,3 +8,8 @@ export const selectIsSendingForm = createSelector(
 );
 
 export const selectFormError = createSelector([selectForm], form => form.error);
+
+export const selectFormWasSent = createSelector(
+  [selectForm],
+  form => form.formWasSent
+);

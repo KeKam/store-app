@@ -2,7 +2,13 @@ import { takeLatest, put, call, all } from 'redux-saga/effects';
 
 import FormActionTypes from './form.types';
 import { saveMessage } from '../../firebase/firebase';
-import { sendFormSuccess, sendFormFailure } from './form.actions';
+import {
+  sendFormSuccess,
+  sendFormFailure,
+  resetFormAfterSuccess
+} from './form.actions';
+
+const delay = ms => new Promise(res => setTimeout(res, ms));
 
 export function* sendForm({ payload: { name, email, description } }) {
   try {
@@ -13,10 +19,23 @@ export function* sendForm({ payload: { name, email, description } }) {
   }
 }
 
+export function* resetForm() {
+  try {
+    yield delay(3000);
+    yield put(resetFormAfterSuccess());
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export function* onStartSendForm() {
   yield takeLatest(FormActionTypes.START_SEND_FORM, sendForm);
 }
 
+export function* onSendFormSuccess() {
+  yield takeLatest(FormActionTypes.SEND_FORM_SUCCESS, resetForm);
+}
+
 export function* formSagas() {
-  yield all([call(onStartSendForm)]);
+  yield all([call(onStartSendForm), call(onSendFormSuccess)]);
 }

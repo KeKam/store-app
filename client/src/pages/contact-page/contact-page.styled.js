@@ -23,3 +23,21 @@ ContactPage.Error = styled.p`
   color: red;
   font-style: italic;
 `;
+
+ContactPage.MessageContainer = styled.div`
+  margin: 280px auto;
+  height: 300px;
+  width: 350px;
+`;
+
+ContactPage.Message = styled.h2`
+  display: flex;
+  justify-content: center;
+  color: green;
+  font-style: italic;
+  margin: 0px 10px;
+
+  @media screen and (max-width: 800px) {
+    font-size: 20px;
+  }
+`;

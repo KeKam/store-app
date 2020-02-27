@@ -14,3 +14,7 @@ export const sendFormFailure = error => ({
   type: FormActionTypes.SEND_FORM_FAILURE,
   payload: error
 });
+
+export const resetFormAfterSuccess = () => ({
+  type: FormActionTypes.RESET_FORM_AFTER_SUCCESS
+});
