@@ -56,7 +56,7 @@ const Header = () => {
             SIGN IN
           </S.Option>
         )}
-        <CartIcon hasScrolledDown={hasScrolledDown} />
+        {currentUser  ? <CartIcon hasScrolledDown={hasScrolledDown} /> : null}
       </S.Options>
       {hidden ? null : <CartDropdown />}
     </S.Container>

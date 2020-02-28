@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import Button from '../button/button';
 
@@ -29,7 +30,7 @@ CollectionItem.Image = styled.div`
   transition: all 0.5s ease;
 
   ${CollectionItem.Container}:hover & {
-    opacity: 0.7;
+    opacity: 0.75;
   }
 
   @media screen and (max-width: 800px) {
@@ -82,4 +83,35 @@ CollectionItem.Text = styled.span`
   text-align: right;
   font-weight: bold;
   color: #e8eaed;
+`;
+
+CollectionItem.SignInButton = styled(Link)`
+  display: none;
+  position: absolute;
+  background: black;
+  width: 100%;
+  height: 93.5%;
+  opacity: 0.5;
+
+  ${CollectionItem.Container}:hover & {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ${CollectionItem.Container}:hover & {
+      opacity: unset;
+    }
+  }
+`;
+
+CollectionItem.SignInButtonText = styled.h2`
+    color: #e8eaed;
+    font-size: 25px;
+    font-weight: bold;
 `;
