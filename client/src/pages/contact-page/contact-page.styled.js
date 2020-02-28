@@ -33,7 +33,7 @@ ContactPage.MessageContainer = styled.div`
 ContactPage.Message = styled.h2`
   display: flex;
   justify-content: center;
-  color: green;
+  color: #e8eaed;
   font-style: italic;
   margin: 0px 10px;
 

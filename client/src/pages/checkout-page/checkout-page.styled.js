@@ -71,10 +71,10 @@ CheckoutPage.Warning = styled.div`
   font-size: 24px;
   font-weight: bold;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 30px;
 
   @media screen and (max-width: 800px) {
-    font-size: 20px;
+    font-size: 17px;
   }
 `;
 

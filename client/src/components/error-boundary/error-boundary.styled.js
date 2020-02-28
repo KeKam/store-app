@@ -9,6 +9,7 @@ ErrorBoundary.Container = styled.div`
   align-items: center;
   height: 60vh;
   width: 100%;
+  margin-top: 100px;
 `;
 
 ErrorBoundary.Image = styled.div`
@@ -22,5 +23,5 @@ ErrorBoundary.Image = styled.div`
 
 ErrorBoundary.Text = styled.h2`
   font-size: 28px;
-  color: black;
+  color: #e8eaed;
 `;

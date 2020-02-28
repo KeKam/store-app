@@ -27,7 +27,7 @@ const CheckoutItem = ({ cartItem }) => {
           &#10095;
         </S.Arrow>
       </S.QuantityContainer>
-      <S.Text>{price} €</S.Text>
+      <S.Text>{quantity * price} €</S.Text>
       <S.RemoveButton onClick={() => dispatch(removeItem(cartItem))}>
         &#10005;
       </S.RemoveButton>

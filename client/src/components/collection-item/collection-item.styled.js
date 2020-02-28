@@ -72,14 +72,13 @@ CollectionItem.Button = styled(Button)`
 `;
 
 CollectionItem.Title = styled.span`
-  width: 90%;
-  margin-bottom: 15px;
+  width: 75%;
   font-weight: bold;
   color: #e8eaed;
 `;
 
 CollectionItem.Text = styled.span`
-  width: 15%;
+  width: 25%;
   text-align: right;
   font-weight: bold;
   color: #e8eaed;
