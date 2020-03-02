@@ -90,7 +90,7 @@ CollectionItem.SignInButton = styled(Link)`
   position: absolute;
   background: black;
   width: 100%;
-  height: 93.5%;
+  height: 93.7%;
   opacity: 0.5;
 
   ${CollectionItem.Container}:hover & {
