@@ -103,10 +103,6 @@ CollectionItem.SignInButton = styled(Link)`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    ${CollectionItem.Container}:hover & {
-      opacity: unset;
-    }
   }
 `;
 

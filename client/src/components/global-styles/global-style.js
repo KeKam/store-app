@@ -11,12 +11,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background-color: #202124;
     font-family: 'Gruppo', cursive;
-    // padding: 20px 60px;
     margin: 0;
-
-    @media screen and (max-width: 800px) {
-      // padding: 10px;
-    }
   }
 
   a {
