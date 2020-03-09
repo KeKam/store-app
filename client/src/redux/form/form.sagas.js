@@ -20,12 +20,8 @@ export function* sendForm({ payload: { name, email, description } }) {
 }
 
 export function* resetForm() {
-  try {
-    yield delay(3000);
-    yield put(resetFormAfterSuccess());
-  } catch (error) {
-    console.log(error);
-  }
+  yield delay(3000);
+  yield put(resetFormAfterSuccess());
 }
 
 export function* onStartSendForm() {
