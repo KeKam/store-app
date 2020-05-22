@@ -12,11 +12,11 @@ CartIcon.Container = styled.div`
   position: relative;
   width: 45px;
   height: 45px;
-  margin-right: ${props => (props.hasScrolledDown ? '25px' : '0px')};
+  margin-right: ${(props) => (props.hasScrolledDown ? '25px' : '0px')};
   cursor: pointer;
 
   span {
-    color: ${props => (props.hasScrolledDown ? '#202124' : '#e8eaed')};
+    color: ${(props) => (props.hasScrolledDown ? '#202124' : '#e8eaed')};
   }
 
   @media screen and (max-width: 800px) {

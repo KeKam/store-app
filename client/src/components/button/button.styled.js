@@ -34,7 +34,7 @@ const googleStyles = css`
   }
 `;
 
-const getStyles = props => {
+const getStyles = (props) => {
   if (props.isGoogleSignIn) {
     return googleStyles;
   } else {

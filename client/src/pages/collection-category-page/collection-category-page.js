@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 import {
   selectCollectionCategory,
-  selectIsCollectionFetched
+  selectIsCollectionFetched,
 } from '../../redux/collection/collection.selectors';
 import CollectionItem from '../../components/collection-item/collection-item';
 import Spinner from '../../components/spinner/spinner';
@@ -23,7 +23,7 @@ const CollectionCategoryPage = ({ match }) => {
         <S.Container>
           <S.Title>{category.title.toUpperCase()}</S.Title>
           <S.Items>
-            {category.items.map(item => (
+            {category.items.map((item) => (
               <CollectionItem key={item.id} item={item} />
             ))}
           </S.Items>

@@ -6,7 +6,7 @@ export const Header = () => {};
 Header.Container = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: ${props => (props.hasScrolledDown ? '0px' : '20px 60px 0px 60px')};
+  padding: ${(props) => (props.hasScrolledDown ? '0px' : '20px 60px 0px 60px')};
   transition: all 0.5s ease;
   top: 0;
   z-index: 1;
@@ -16,7 +16,7 @@ Header.Container = styled.div`
   margin-bottom: 25px;
 
   a {
-    color: ${props => (props.hasScrolledDown ? '#202124' : '#e8eaed')};
+    color: ${(props) => (props.hasScrolledDown ? '#202124' : '#e8eaed')};
   }
 
   @media screen and (max-width: 800px) {
@@ -31,7 +31,7 @@ Header.LogoContainer = styled.div`
   display: flex;
   align-items: center;
   border-bottom: 1px groove #e8eaed;
-  background-color: ${props =>
+  background-color: ${(props) =>
     props.hasScrolledDown ? '#e8eaed' : 'transparent'};
   transition: all 0.5s ease;
   height: 100%;
@@ -50,7 +50,7 @@ Header.Options = styled.div`
   justify-content: flex-end;
   align-items: center;
   border-bottom: 1px groove #e8eaed;
-  background-color: ${props =>
+  background-color: ${(props) =>
     props.hasScrolledDown ? '#e8eaed' : 'transparent'};
   transition: all 0.5s ease;
   width: 50%;
@@ -101,7 +101,7 @@ Header.LogoNumber = styled.div`
   font-family: 'Courgette', cursive;
   font-weight: bold;
   padding: 10px 0;
-  margin: ${props =>
+  margin: ${(props) =>
     props.hasScrolledDown ? '0px 5px 0px 25px' : '0px 5px 0px 0px'};
   @media screen and (max-width: 800px) {
     margin: 0px 5px 0px 0px;

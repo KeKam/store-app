@@ -11,13 +11,13 @@ const SignUp = () => {
     displayName: '',
     email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
   });
   const dispatch = useDispatch();
 
   const { displayName, email, password, confirmPassword } = userInformation;
 
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
@@ -28,7 +28,7 @@ const SignUp = () => {
     dispatch(startSignUp({ displayName, email, password }));
   };
 
-  const onInputChange = e => {
+  const onInputChange = (e) => {
     const { value, name } = e.target;
     setUserInformation({ ...userInformation, [name]: value });
   };

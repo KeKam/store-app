@@ -29,7 +29,7 @@ const Header = () => {
     const bodyScrollTop =
       document.documentElement.scrollTop || document.body.scrollTop;
     const scrolledDown = bodyScrollTop > 50 ? true : false;
-    setHasScrolledDown(scrolledDown)
+    setHasScrolledDown(scrolledDown);
   };
 
   return (
@@ -56,7 +56,7 @@ const Header = () => {
             SIGN IN
           </S.Option>
         )}
-        {currentUser  ? <CartIcon hasScrolledDown={hasScrolledDown} /> : null}
+        {currentUser ? <CartIcon hasScrolledDown={hasScrolledDown} /> : null}
       </S.Options>
       {hidden ? null : <CartDropdown />}
     </S.Container>

@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import {
   removeFromCart,
   removeItem,
-  addToCart
+  addToCart,
 } from '../../redux/cart/cart.actions';
 import { CheckoutItem as S } from './checkout-item.styled';
 

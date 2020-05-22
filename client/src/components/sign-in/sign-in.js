@@ -5,25 +5,25 @@ import FormInput from '../form-input/form-input';
 import Button from '../button/button';
 import {
   startGoogleSignIn,
-  startEmailSignIn
+  startEmailSignIn,
 } from '../../redux/user/user.actions';
 import { SignIn as S } from './sign-in.styled';
 
 const SignIn = () => {
   const [userCredentials, setUserCredentials] = useState({
     email: '',
-    password: ''
+    password: '',
   });
   const dispatch = useDispatch();
 
   const { email, password } = userCredentials;
 
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault();
     dispatch(startEmailSignIn({ email, password }));
   };
 
-  const onInputChange = e => {
+  const onInputChange = (e) => {
     const { value, name } = e.target;
     setUserCredentials({ ...userCredentials, [name]: value });
   };

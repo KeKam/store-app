@@ -13,13 +13,13 @@ const rootReducer = combineReducers({
   cart: cartReducer,
   directory: directoryReducer,
   collection: collectionReducer,
-  form: formReducer
+  form: formReducer,
 });
 
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['cart']
+  whitelist: ['cart'],
 };
 
 export default persistReducer(persistConfig, rootReducer);

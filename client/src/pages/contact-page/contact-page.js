@@ -7,7 +7,7 @@ import Spinner from '../../components/spinner/spinner';
 import {
   selectIsSendingForm,
   selectFormError,
-  selectFormWasSent
+  selectFormWasSent,
 } from '../../redux/form/form.selectors';
 import { startSendForm } from '../../redux/form/form.actions';
 import { ContactPage as S } from './contact-page.styled';
@@ -16,7 +16,7 @@ const ContactPage = () => {
   const [contactInformation, setContactInformation] = useState({
     name: '',
     email: '',
-    description: ''
+    description: '',
   });
   const isSendingForm = useSelector(selectIsSendingForm);
   const formError = useSelector(selectFormError);
@@ -25,13 +25,13 @@ const ContactPage = () => {
 
   const { name, email, description } = contactInformation;
 
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault();
     dispatch(startSendForm({ name, email, description }));
     resetInputs();
   };
 
-  const onInputChange = e => {
+  const onInputChange = (e) => {
     const { value, name } = e.target;
     setContactInformation({ ...contactInformation, [name]: value });
   };

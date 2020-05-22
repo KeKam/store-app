@@ -107,7 +107,7 @@ CollectionItem.SignInButton = styled(Link)`
 `;
 
 CollectionItem.SignInButtonText = styled.h2`
-    color: #e8eaed;
-    font-size: 25px;
-    font-weight: bold;
+  color: #e8eaed;
+  font-size: 25px;
+  font-weight: bold;
 `;

@@ -44,10 +44,10 @@ FormInput.Input = styled.input`
 
 FormInput.Label = styled.label`
   position: absolute;
-  font-size: ${props => (props.value.length ? '12px' : '16px')};
+  font-size: ${(props) => (props.value.length ? '12px' : '16px')};
   color: grey;
   pointer-events: none;
   left: 5px;
-  top: ${props => (props.value.length ? '-14px' : '10px')};
+  top: ${(props) => (props.value.length ? '-14px' : '10px')};
   transition: 300ms ease all;
 `;

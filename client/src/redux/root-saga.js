@@ -10,6 +10,6 @@ export default function* rootSaga() {
     call(collectionSagas),
     call(cartSagas),
     call(userSagas),
-    call(formSagas)
+    call(formSagas),
   ]);
 }

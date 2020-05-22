@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 import {
   selectCollectionCategoriesForPreview,
-  selectIsCollectionFetching
+  selectIsCollectionFetching,
 } from '../../redux/collection/collection.selectors';
 import Spinner from '../spinner/spinner';
 import CollectionPreview from '../collection-preview/collection-preview';

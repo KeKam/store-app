@@ -5,10 +5,10 @@ import { saveMessage } from '../../firebase/firebase';
 import {
   sendFormSuccess,
   sendFormFailure,
-  resetFormAfterSuccess
+  resetFormAfterSuccess,
 } from './form.actions';
 
-const delay = ms => new Promise(res => setTimeout(res, ms));
+const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
 export function* sendForm({ payload: { name, email, description } }) {
   try {

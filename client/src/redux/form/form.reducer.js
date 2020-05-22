@@ -3,7 +3,7 @@ import FormActionTypes from './form.types';
 const DEFAULT_STATE = {
   formWasSent: null,
   isSending: false,
-  error: null
+  error: null,
 };
 
 const formReducer = (state = DEFAULT_STATE, action) => {
@@ -12,20 +12,20 @@ const formReducer = (state = DEFAULT_STATE, action) => {
       return {
         ...state,
         isSending: true,
-        error: null
+        error: null,
       };
     case FormActionTypes.SEND_FORM_SUCCESS:
       return {
         ...state,
         formWasSent: action.payload,
         isSending: false,
-        error: null
+        error: null,
       };
     case FormActionTypes.SEND_FORM_FAILURE:
       return {
         ...state,
         error: action.payload,
-        isSending: false
+        isSending: false,
       };
     case FormActionTypes.RESET_FORM_AFTER_SUCCESS:
       return DEFAULT_STATE;

@@ -6,15 +6,15 @@ const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100;
   const publishableKey = 'pk_test_4fI10ashegBwZ8CQcI0EjdgL00kRVDyXIX';
 
-  const onToken = async token => {
+  const onToken = async (token) => {
     try {
       await axios({
         url: 'payment',
         method: 'post',
         data: {
           amount: priceForStripe,
-          token
-        }
+          token,
+        },
       });
       alert('Payment was successful');
     } catch (error) {

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 import {
   selectCartItems,
-  selectCartTotal
+  selectCartTotal,
 } from '../../redux/cart/cart.selectors';
 import CheckoutItem from '../../components/checkout-item/checkout-item';
 import StipeCheckoutButton from '../../components/stripe-checkout-button/stripe-checkout-button';
@@ -33,7 +33,7 @@ const CheckoutPage = () => {
         </S.Block>
       </S.Header>
       {cartItems.length ? (
-        cartItems.map(cartItem => (
+        cartItems.map((cartItem) => (
           <CheckoutItem key={cartItem.id} cartItem={cartItem} />
         ))
       ) : (

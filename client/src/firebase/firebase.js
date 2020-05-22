@@ -10,7 +10,7 @@ const config = {
   storageBucket: 'store-db-db0cc.appspot.com',
   messagingSenderId: '398469642597',
   appId: '1:398469642597:web:b90c810269ca2a4e32498c',
-  measurementId: 'G-E75TXN0ZSS'
+  measurementId: 'G-E75TXN0ZSS',
 };
 
 export const createUserProfileDocument = async (user, additionalData) => {
@@ -28,7 +28,7 @@ export const createUserProfileDocument = async (user, additionalData) => {
         displayName,
         email,
         createdAt,
-        ...additionalData
+        ...additionalData,
       });
     } catch (error) {
       console.log('Failed creating user', error);
@@ -37,7 +37,7 @@ export const createUserProfileDocument = async (user, additionalData) => {
   return userRef;
 };
 
-export const getCurrentUserCart = async userId => {
+export const getCurrentUserCart = async (userId) => {
   try {
     const cartsRef = firestore
       .collection('carts')
@@ -56,15 +56,15 @@ export const getCurrentUserCart = async userId => {
   }
 };
 
-export const convertCollectionSnapshotToMap = collection => {
-  const transformedCollection = collection.docs.map(doc => {
+export const convertCollectionSnapshotToMap = (collection) => {
+  const transformedCollection = collection.docs.map((doc) => {
     const { title, items } = doc.data();
 
     return {
       id: doc.id,
       title,
       routeName: encodeURI(title.toLowerCase()),
-      items
+      items,
     };
   });
 
@@ -76,7 +76,7 @@ export const convertCollectionSnapshotToMap = collection => {
 
 export const getCurrentUser = () => {
   return new Promise((resolve, reject) => {
-    const unsubscribe = auth.onAuthStateChanged(userAuth => {
+    const unsubscribe = auth.onAuthStateChanged((userAuth) => {
       unsubscribe();
       resolve(userAuth);
     }, reject);
@@ -89,7 +89,7 @@ export const saveMessage = async (name, email, description) => {
     await newMessageRef.set({
       name,
       email,
-      description
+      description,
     });
     return newMessageRef;
   } catch (error) {

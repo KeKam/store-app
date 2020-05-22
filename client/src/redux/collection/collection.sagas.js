@@ -3,11 +3,11 @@ import { takeLatest, call, put, all } from 'redux-saga/effects';
 import CollectionActionTypes from './collection.types';
 import {
   firestore,
-  convertCollectionSnapshotToMap
+  convertCollectionSnapshotToMap,
 } from '../../firebase/firebase';
 import {
   fetchCollectionSuccess,
-  fetchCollectionFailure
+  fetchCollectionFailure,
 } from './collection.actions';
 
 export function* fetchCollection() {

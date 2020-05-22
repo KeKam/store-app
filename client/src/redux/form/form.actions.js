@@ -1,20 +1,20 @@
 import FormActionTypes from './form.types';
 
-export const startSendForm = contactInformation => ({
+export const startSendForm = (contactInformation) => ({
   type: FormActionTypes.START_SEND_FORM,
-  payload: contactInformation
+  payload: contactInformation,
 });
 
-export const sendFormSuccess = form => ({
+export const sendFormSuccess = (form) => ({
   type: FormActionTypes.SEND_FORM_SUCCESS,
-  payload: form
+  payload: form,
 });
 
-export const sendFormFailure = error => ({
+export const sendFormFailure = (error) => ({
   type: FormActionTypes.SEND_FORM_FAILURE,
-  payload: error
+  payload: error,
 });
 
 export const resetFormAfterSuccess = () => ({
-  type: FormActionTypes.RESET_FORM_AFTER_SUCCESS
+  type: FormActionTypes.RESET_FORM_AFTER_SUCCESS,
 });

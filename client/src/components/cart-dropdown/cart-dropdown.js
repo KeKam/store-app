@@ -15,7 +15,7 @@ const CartDropdown = ({ history }) => {
     <S.Container>
       <S.Items>
         {cartItems.length ? (
-          cartItems.map(cartItem => (
+          cartItems.map((cartItem) => (
             <CartItem key={cartItem.id} item={cartItem} />
           ))
         ) : (
