@@ -1,16 +1,21 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { useHistory, useRouteMatch } from 'react-router-dom';
 
 import { MenuItem as S } from './menu-item.styled';
 
-const MenuItem = ({ title, imageUrl, history, linkUrl, match }) => (
-  <S.Container onClick={() => history.push(`${match.url}${linkUrl}`)}>
-    <S.Image imageUrl={imageUrl} />
-    <S.Content>
-      <S.Title>{title}</S.Title>
-      <S.Subtitle>SEE COLLECTION</S.Subtitle>
-    </S.Content>
-  </S.Container>
-);
+const MenuItem = ({ title, imageUrl, linkUrl }) => {
+  const history = useHistory();
+  const match = useRouteMatch();
 
-export default withRouter(MenuItem);
+  return (
+    <S.Container onClick={() => history.push(`${match.url}${linkUrl}`)}>
+      <S.Image imageUrl={imageUrl} />
+      <S.Content>
+        <S.Title>{title}</S.Title>
+        <S.Subtitle>SEE COLLECTION</S.Subtitle>
+      </S.Content>
+    </S.Container>
+  );
+};
+
+export default MenuItem;
