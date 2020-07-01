@@ -37,7 +37,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div>
+    <>
       {formWasSent ? (
         <S.MessageContainer>
           <S.Message>Message sent</S.Message>
@@ -89,7 +89,7 @@ const ContactPage = () => {
           )}
         </S.Container>
       )}
-    </div>
+    </>
   );
 };
 
