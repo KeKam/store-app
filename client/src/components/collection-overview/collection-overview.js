@@ -13,17 +13,17 @@ const CollectionOverview = () => {
   const collection = useSelector(selectCollectionCategoriesForPreview);
 
   return (
-    <div>
+    <>
       {isCollectionFetching ? (
         <Spinner />
       ) : (
-        <div>
+        <>
           {collection.map(({ id, ...collectionProps }) => (
             <CollectionPreview key={id} {...collectionProps} />
           ))}
-        </div>
+        </>
       )}
-    </div>
+    </>
   );
 };
 

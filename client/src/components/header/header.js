@@ -16,16 +16,16 @@ const Header = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    window.addEventListener('scroll', onScrollDown);
+    window.addEventListener('scroll', handleOnScroll);
   }, []);
 
-  const closeCart = () => {
+  const handleOnClick = () => {
     if (!hidden) {
       dispatch(toggleCart());
     }
   };
 
-  const onScrollDown = () => {
+  const handleOnScroll = () => {
     const bodyScrollTop =
       document.documentElement.scrollTop || document.body.scrollTop;
     const scrolledDown = bodyScrollTop > 50 ? true : false;
@@ -35,26 +35,20 @@ const Header = () => {
   return (
     <S.Container hasScrolledDown={hasScrolledDown}>
       <S.LogoContainer hasScrolledDown={hasScrolledDown}>
-        <S.Logo to='/' onClick={closeCart}>
+        <S.Logo to='/' onClick={handleOnClick}>
           <S.LogoNumber hasScrolledDown={hasScrolledDown}>4</S.LogoNumber>
           <S.LogoText>SEASONS</S.LogoText>
         </S.Logo>
       </S.LogoContainer>
-      <S.Options hasScrolledDown={hasScrolledDown}>
-        <S.Option to='/collection' onClick={closeCart}>
-          COLLECTION
-        </S.Option>
-        <S.Option to='/contact' onClick={closeCart}>
-          CONTACT
-        </S.Option>
+      <S.Options onClick={handleOnClick} hasScrolledDown={hasScrolledDown}>
+        <S.Option to='/collection'>COLLECTION</S.Option>
+        <S.Option to='/contact'>CONTACT</S.Option>
         {currentUser ? (
           <S.Option to='/' onClick={() => dispatch(startSignOut())}>
             SIGN OUT
           </S.Option>
         ) : (
-          <S.Option to='/login' onClick={closeCart}>
-            SIGN IN
-          </S.Option>
+          <S.Option to='/login'>SIGN IN</S.Option>
         )}
         {currentUser ? <CartIcon hasScrolledDown={hasScrolledDown} /> : null}
       </S.Options>

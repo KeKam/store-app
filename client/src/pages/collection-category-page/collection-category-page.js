@@ -16,7 +16,7 @@ const CollectionCategoryPage = ({ match }) => {
   );
 
   return (
-    <div>
+    <>
       {!isCollectionFetched ? (
         <Spinner />
       ) : (
@@ -29,7 +29,7 @@ const CollectionCategoryPage = ({ match }) => {
           </S.Items>
         </S.Container>
       )}
-    </div>
+    </>
   );
 };
 

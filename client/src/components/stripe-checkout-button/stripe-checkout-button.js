@@ -6,7 +6,7 @@ const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100;
   const publishableKey = 'pk_test_4fI10ashegBwZ8CQcI0EjdgL00kRVDyXIX';
 
-  const onToken = async (token) => {
+  const handleOnToken = async (token) => {
     try {
       await axios({
         url: 'payment',
@@ -34,7 +34,7 @@ const StripeCheckoutButton = ({ price }) => {
       description={`Your total is ${price} €`}
       amount={priceForStripe}
       panelLabel='Pay Now'
-      token={onToken}
+      token={handleOnToken}
       stripeKey={publishableKey}
       currency='EUR'
     />

@@ -25,19 +25,15 @@ const ContactPage = () => {
 
   const { name, email, description } = contactInformation;
 
-  const onSubmit = (e) => {
+  const handleOnSubmit = (e) => {
     e.preventDefault();
     dispatch(startSendForm({ name, email, description }));
-    resetInputs();
+    setContactInformation({ name: '', email: '', description: '' });
   };
 
-  const onInputChange = (e) => {
+  const handleOnChange = (e) => {
     const { value, name } = e.target;
     setContactInformation({ ...contactInformation, [name]: value });
-  };
-
-  const resetInputs = () => {
-    setContactInformation({ name: '', email: '', description: '' });
   };
 
   return (
@@ -59,12 +55,12 @@ const ContactPage = () => {
                 {formError ? 'Something went wrong, please try again' : null}
               </S.Error>
 
-              <form onSubmit={onSubmit}>
+              <form onSubmit={handleOnSubmit}>
                 <FormInput
                   name='name'
                   type='text'
                   value={name}
-                  onChange={onInputChange}
+                  onChange={handleOnChange}
                   label='Name'
                   required
                 />
@@ -72,7 +68,7 @@ const ContactPage = () => {
                   name='email'
                   type='email'
                   value={email}
-                  onChange={onInputChange}
+                  onChange={handleOnChange}
                   label='Email'
                   required
                 />
@@ -81,7 +77,7 @@ const ContactPage = () => {
                   name='description'
                   type='text'
                   value={description}
-                  onChange={onInputChange}
+                  onChange={handleOnChange}
                   rows='5'
                   label='Description'
                   required

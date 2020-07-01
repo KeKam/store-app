@@ -12,6 +12,11 @@ const CartDropdown = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
+  const handleOnClick = () => {
+    history.push('/checkout');
+    dispatch(toggleCart());
+  };
+
   return (
     <S.Container>
       <S.Items>
@@ -23,14 +28,7 @@ const CartDropdown = () => {
           <S.Text>You have no added items</S.Text>
         )}
       </S.Items>
-      <S.Button
-        onClick={() => {
-          history.push('/checkout');
-          dispatch(toggleCart());
-        }}
-      >
-        GO TO CHECKOUT
-      </S.Button>
+      <S.Button onClick={handleOnClick}>GO TO CHECKOUT</S.Button>
     </S.Container>
   );
 };

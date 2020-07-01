@@ -17,7 +17,7 @@ const SignUp = () => {
 
   const { displayName, email, password, confirmPassword } = userInformation;
 
-  const onSubmit = (e) => {
+  const handleOnSubmit = (e) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
@@ -28,7 +28,7 @@ const SignUp = () => {
     dispatch(startSignUp({ displayName, email, password }));
   };
 
-  const onInputChange = (e) => {
+  const handleOnChange = (e) => {
     const { value, name } = e.target;
     setUserInformation({ ...userInformation, [name]: value });
   };
@@ -38,12 +38,12 @@ const SignUp = () => {
       <S.Title>I do not have a account</S.Title>
       <span>Sign up with your email and password</span>
 
-      <form onSubmit={onSubmit}>
+      <form onSubmit={handleOnSubmit}>
         <FormInput
           name='displayName'
           type='text'
           value={displayName}
-          onChange={onInputChange}
+          onChange={handleOnChange}
           label='Display Name'
           required
         />
@@ -51,7 +51,7 @@ const SignUp = () => {
           name='email'
           type='email'
           value={email}
-          onChange={onInputChange}
+          onChange={handleOnChange}
           label='Email'
           required
         />
@@ -59,7 +59,7 @@ const SignUp = () => {
           name='password'
           type='password'
           value={password}
-          onChange={onInputChange}
+          onChange={handleOnChange}
           label='Password'
           required
         />
@@ -67,7 +67,7 @@ const SignUp = () => {
           name='confirmPassword'
           type='password'
           value={confirmPassword}
-          onChange={onInputChange}
+          onChange={handleOnChange}
           label='Confirm Password'
           required
         />

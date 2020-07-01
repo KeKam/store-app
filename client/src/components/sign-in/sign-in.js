@@ -18,12 +18,12 @@ const SignIn = () => {
 
   const { email, password } = userCredentials;
 
-  const onSubmit = (e) => {
+  const handleOnSubmit = (e) => {
     e.preventDefault();
     dispatch(startEmailSignIn({ email, password }));
   };
 
-  const onInputChange = (e) => {
+  const handleOnChange = (e) => {
     const { value, name } = e.target;
     setUserCredentials({ ...userCredentials, [name]: value });
   };
@@ -33,12 +33,12 @@ const SignIn = () => {
       <S.Title>I already have an account</S.Title>
       <span>Sign in with your email and password</span>
 
-      <form onSubmit={onSubmit}>
+      <form onSubmit={handleOnSubmit}>
         <FormInput
           name='email'
           type='email'
           value={email}
-          onChange={onInputChange}
+          onChange={handleOnChange}
           label='Email'
           required
         />
@@ -46,7 +46,7 @@ const SignIn = () => {
           name='password'
           type='password'
           value={password}
-          onChange={onInputChange}
+          onChange={handleOnChange}
           label='Password'
           required
         />

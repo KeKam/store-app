@@ -30,7 +30,7 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <>
       <GlobalStyle />
       <Header />
       <Switch>
@@ -48,7 +48,7 @@ const App = () => {
           </Suspense>
         </ErrorBoundary>
       </Switch>
-    </div>
+    </>
   );
 };
 
