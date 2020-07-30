@@ -16,7 +16,7 @@ const CollectionPage = ({ match }) => {
 
   return (
     <S.Container>
-      <Route exact path={`${match.path}`} component={CollectionOverview} />
+      <Route exact path={match.path} component={CollectionOverview} />
       <Route
         path={`${match.path}/:categoryId`}
         component={CollectionCategoryPage}
