@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartDropdown component should render CartDropdown component 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bZQynM gijLaK"
+  >
+    <div
+      class="sc-gzVnrw iTpHW"
+    >
+      <span
+        class="sc-htoDjs cUjmSq"
+      >
+        You have no added items
+      </span>
+    </div>
+    <button
+      class="sc-EHOje dANjrR sc-dnqmqq kogUxh"
+    >
+      GO TO CHECKOUT
+    </button>
+  </div>
+</DocumentFragment>
+`;
