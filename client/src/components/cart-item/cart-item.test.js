@@ -1,46 +1,41 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { Provider } from 'react-redux';
-import configureStore from 'redux-mock-store';
 
 import { removeItem } from '../../redux/cart/cart.actions';
+import { render, screen } from '../../test-utils';
 import CartItem from './cart-item';
 
-const mockStore = configureStore();
-const mockItem = {
-  id: 1,
-  name: 'Winter falls',
-  imageUrl: 'www.testImage.com',
-  price: 100,
-  quantity: 2,
-};
-
 describe('CartItem component', () => {
-  let store;
+  let mockItem;
 
   beforeEach(() => {
-    store = mockStore({ cartItems: [] });
-    store.dispatch = jest.fn();
-
-    render(
-      <Provider store={store}>
-        <CartItem item={mockItem} />
-      </Provider>
-    );
+    mockItem = {
+      id: 1,
+      name: 'Winter falls',
+      imageUrl: 'www.testImage.com',
+      price: 100,
+      quantity: 2,
+    };
   });
 
   it('should render CartItem component', () => {
+    const { asFragment } = render(<CartItem item={mockItem} />);
+
+    expect(asFragment()).toMatchSnapshot();
     expect(screen.getByText('Winter falls')).toBeInTheDocument();
+    expect(
+      screen.getByRole('img', { src: 'www.testImage.com' })
+    ).toBeInTheDocument();
     expect(screen.getByText(`2 x 100 €`)).toBeInTheDocument();
     expect(screen.getByText('✕')).toBeInTheDocument();
   });
 
   it('should dispatch removeItem action on click', () => {
+    const { getDispatchedActions } = render(<CartItem item={mockItem} />);
+
     userEvent.click(screen.getByText('✕'));
 
-    expect(store.dispatch).toHaveBeenCalledTimes(1);
-    expect(store.dispatch).toHaveBeenCalledWith(removeItem(mockItem));
+    expect(getDispatchedActions()).toContainEqual(removeItem(mockItem));
   });
 });

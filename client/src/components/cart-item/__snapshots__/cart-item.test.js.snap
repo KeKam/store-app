@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItem component should render CartItem component 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bdVaJa kvvHNX"
+  >
+    <img
+      alt="item"
+      class="sc-bwzfXH jnbQjq"
+      src="www.testImage.com"
+    />
+    <div
+      class="sc-htpNat dmQnSY"
+    >
+      <span
+        class="sc-bxivhb gALRNL"
+      >
+        Winter falls
+      </span>
+      <span
+        class="sc-bxivhb gALRNL"
+      >
+        2 x 100 € 
+      </span>
+    </div>
+    <div
+      class="sc-ifAKCX bzVrsu"
+    >
+      ✕
+    </div>
+  </div>
+</DocumentFragment>
+`;
