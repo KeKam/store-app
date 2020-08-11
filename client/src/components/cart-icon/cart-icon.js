@@ -14,8 +14,12 @@ const CartIcon = ({ hasScrolledDown }) => {
       hasScrolledDown={hasScrolledDown}
       onClick={() => dispatch(toggleCart())}
     >
-      {hasScrolledDown ? <S.ShoppingBagExtended /> : <S.ShoppingBag />}
-      <S.Number>{itemCount}</S.Number>
+      {hasScrolledDown ? (
+        <S.ShoppingBagExtended data-testid='bag-extended' />
+      ) : (
+        <S.ShoppingBag data-testid='bag' />
+      )}
+      <S.Number data-testid='item-count'>{itemCount}</S.Number>
     </S.Container>
   );
 };
