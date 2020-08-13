@@ -23,11 +23,11 @@ describe('CartItem component', () => {
     const { asFragment } = render(<CartItem item={mockItem} />);
 
     expect(asFragment()).toMatchSnapshot();
-    expect(screen.getByText('Winter falls')).toBeInTheDocument();
+    expect(screen.getByTestId('title')).toHaveTextContent('Winter falls');
     expect(
       screen.getByRole('img', { src: 'www.testImage.com' })
     ).toBeInTheDocument();
-    expect(screen.getByText(`2 x 100 €`)).toBeInTheDocument();
+    expect(screen.getByTestId('price')).toHaveTextContent(`2 x 100 €`);
     expect(screen.getByText('✕')).toBeInTheDocument();
   });
 

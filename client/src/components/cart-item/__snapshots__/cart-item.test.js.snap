@@ -15,13 +15,15 @@ exports[`CartItem component should render CartItem component 1`] = `
     >
       <span
         class="sc-bxivhb gALRNL"
+        data-testid="title"
       >
         Winter falls
       </span>
       <span
         class="sc-bxivhb gALRNL"
+        data-testid="price"
       >
-        2 x 100 € 
+        2 x 100 €
       </span>
     </div>
     <div

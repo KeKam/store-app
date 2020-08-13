@@ -12,9 +12,9 @@ const CartItem = ({ item }) => {
     <S.Container>
       <S.Image src={imageUrl} alt='item' />
       <S.Details>
-        <S.Text>{name}</S.Text>
-        <S.Text>
-          {quantity} x {price} €{' '}
+        <S.Text data-testid='title'>{name}</S.Text>
+        <S.Text data-testid='price'>
+          {quantity} x {price} €{''}
         </S.Text>
       </S.Details>
       <S.RemoveButton onClick={() => dispatch(removeItem(item))}>
