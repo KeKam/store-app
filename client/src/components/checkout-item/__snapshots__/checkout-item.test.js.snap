@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckoutItem component should render CheckoutItem component 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bdVaJa kqBKPi"
+  >
+    <div
+      class="sc-bwzfXH cBObtq"
+    >
+      <img
+        alt="item"
+        class="sc-htpNat flXzWO"
+        src="www.testImage.com"
+      />
+    </div>
+    <span
+      class="sc-bxivhb bZgbkN"
+      data-testid="title"
+    >
+      Winter falls
+    </span>
+    <span
+      class="sc-bxivhb sc-ifAKCX ixeIqU"
+    >
+      <div
+        class="sc-EHOje boCYJR"
+        data-testid="left-arrow"
+      >
+        ❮
+      </div>
+      <span
+        data-testid="quantity"
+      >
+        3
+      </span>
+      <div
+        class="sc-EHOje boCYJR"
+        data-testid="right-arrow"
+      >
+        ❯
+      </div>
+    </span>
+    <span
+      class="sc-bxivhb bZgbkN"
+      data-testid="price"
+    >
+      300 €
+    </span>
+    <div
+      class="sc-bZQynM cZxgzJ"
+      data-testid="remove-button"
+    >
+      ✕
+    </div>
+  </div>
+</DocumentFragment>
+`;

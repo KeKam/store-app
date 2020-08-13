@@ -5,24 +5,6 @@ import { Provider } from 'react-redux';
 
 import rootReducer from './redux/root-reducer';
 
-// const render = (
-//   component,
-//   {
-//     initialState,
-//     store = createStore(rootReducer, initialState),
-//     ...renderOptions
-//   } = {}
-// ) => {
-//   return {
-//     ...rtlRender(<Provider store={store}>{component}</Provider>),
-//     store,
-//   };
-//   // const Wrapper = ({ children }) => {
-//   //   return <Provider store={store}>{children}</Provider>;
-//   // };
-//   // return rtlRender(ui, { wrapper: Wrapper, ...renderOptions });
-// };
-
 const render = (component, { initialState } = {}) => {
   const actions = [];
   const observerMiddleware = () => (next) => (action) => {
@@ -35,15 +17,16 @@ const render = (component, { initialState } = {}) => {
     applyMiddleware(observerMiddleware)
   );
   const utils = {
-    dispatch(action) {
+    dispatch: (action) => {
       return store.dispatch(action);
     },
-    getDispatchedActions() {
+    getDispatchedActions: () => {
       return actions;
     },
-    getState() {
+    getState: () => {
       return store.getState();
     },
+    rerenderWithRedux: (component) => render(component, { store }),
   };
   return {
     ...rtlRender(<Provider store={store}>{component}</Provider>),

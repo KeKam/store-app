@@ -17,18 +17,27 @@ const CheckoutItem = ({ cartItem }) => {
       <S.ImageContainer>
         <S.Image alt='item' src={imageUrl} />
       </S.ImageContainer>
-      <S.Text>{name}</S.Text>
+      <S.Text data-testid='title'>{name}</S.Text>
       <S.QuantityContainer>
-        <S.Arrow onClick={() => dispatch(removeFromCart(cartItem))}>
+        <S.Arrow
+          data-testid='left-arrow'
+          onClick={() => dispatch(removeFromCart(cartItem))}
+        >
           &#10094;
         </S.Arrow>
-        <span>{quantity}</span>
-        <S.Arrow onClick={() => dispatch(addToCart(cartItem))}>
+        <span data-testid='quantity'>{quantity}</span>
+        <S.Arrow
+          data-testid='right-arrow'
+          onClick={() => dispatch(addToCart(cartItem))}
+        >
           &#10095;
         </S.Arrow>
       </S.QuantityContainer>
-      <S.Text>{quantity * price} €</S.Text>
-      <S.RemoveButton onClick={() => dispatch(removeItem(cartItem))}>
+      <S.Text data-testid='price'>{quantity * price} €</S.Text>
+      <S.RemoveButton
+        data-testid='remove-button'
+        onClick={() => dispatch(removeItem(cartItem))}
+      >
         &#10005;
       </S.RemoveButton>
     </S.Container>
