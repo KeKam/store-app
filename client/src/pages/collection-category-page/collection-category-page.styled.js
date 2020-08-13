@@ -26,7 +26,7 @@ CollectionCategoryPage.Items = styled.div`
 
   @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
-    grid-gap: 15px;
+    grid-gap: 40px;
 
     & > div {
       margin-bottom: 0px;
