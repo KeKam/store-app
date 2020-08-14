@@ -12,17 +12,20 @@ const CollectionItem = ({ item }) => {
 
   return (
     <S.Container>
-      <S.Image imageUrl={imageUrl} />
+      <S.Image data-testid='image' imageUrl={imageUrl} />
       <S.Footer>
-        <S.Title>{name}</S.Title>
-        <S.Text>{price} €</S.Text>
+        <S.Title data-testid='title'>{name}</S.Title>
+        <S.Text data-testid='price'>{price} €</S.Text>
       </S.Footer>
       {currentUser ? (
-        <S.Button onClick={() => dispatch(addToCart(item))}>
+        <S.Button
+          data-testid='button'
+          onClick={() => dispatch(addToCart(item))}
+        >
           ADD TO CART
         </S.Button>
       ) : (
-        <S.SignInButton to='/login'>
+        <S.SignInButton data-testid='link' to='/login'>
           <S.SignInButtonText>Sign in required</S.SignInButtonText>
         </S.SignInButton>
       )}

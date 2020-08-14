@@ -26,7 +26,7 @@ const render = (component, { initialState } = {}) => {
     getState: () => {
       return store.getState();
     },
-    rerenderWithRedux: (component) => render(component, { store }),
+    rerenderWithRedux: (component) => render(component, { initialState }),
   };
   return {
     ...rtlRender(<Provider store={store}>{component}</Provider>),
