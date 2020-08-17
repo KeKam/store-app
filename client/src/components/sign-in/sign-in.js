@@ -41,6 +41,7 @@ const SignIn = () => {
           onChange={handleOnChange}
           label='Email'
           required
+          data-testid='email-input'
         />
         <FormInput
           name='password'
@@ -49,6 +50,7 @@ const SignIn = () => {
           onChange={handleOnChange}
           label='Password'
           required
+          data-testid='password-input'
         />
         <S.ButtonsContainer>
           <Button type='submit'> Sign in </Button>
