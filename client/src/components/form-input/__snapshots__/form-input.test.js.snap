@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInput component should render FormInput component 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bdVaJa eEzrUY"
+  >
+    <input
+      class="sc-bwzfXH eKtSpl"
+      value="testUser@gmail.com"
+    />
+    <label
+      class="sc-htpNat cAoTjx"
+      value="testUser@gmail.com"
+    >
+      Email
+    </label>
+  </div>
+</DocumentFragment>
+`;
