@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CollectionOverview component should render CollectionOverview component 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-gZMcBi bDGOlb"
+  >
+    <h1
+      class="sc-gqjmRU gMKFKr"
+    >
+      SPRING
+    </h1>
+    <div
+      class="sc-VigVT cDSFvV"
+    >
+      <div
+        class="sc-bxivhb fdOdhE"
+      >
+        <div
+          class="sc-ifAKCX hcGWe"
+          data-testid="image"
+        />
+        <div
+          class="sc-EHOje hBqQKK"
+        >
+          <span
+            class="sc-gzVnrw fknHjO"
+            data-testid="title"
+          >
+            Tulips
+          </span>
+          <span
+            class="sc-htoDjs hPkBFt"
+            data-testid="price"
+          >
+            20 €
+          </span>
+        </div>
+        <a
+          class="sc-dnqmqq ctrnlw"
+          data-testid="link"
+          href="/login"
+        >
+          <h2
+            class="sc-iwsKbI dGodUG"
+          >
+            Sign in required
+          </h2>
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
