@@ -5,7 +5,7 @@ import { Spinner as S } from './spinner.styled';
 const Spinner = () => {
   return (
     <S.Container>
-      <S.Spinner />
+      <S.Spinner data-testid='spinner' />
     </S.Container>
   );
 };
