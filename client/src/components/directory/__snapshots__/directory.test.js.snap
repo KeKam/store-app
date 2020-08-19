@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Directory component should render Directory component 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-EHOje fpJsVf"
+  >
+    <div
+      class="sc-bdVaJa hJLFdt"
+      data-testid="item"
+    >
+      <div
+        class="sc-bwzfXH klmmtG"
+        data-testid="image"
+      />
+      <div
+        class="sc-htpNat fMwJqu"
+      >
+        <div
+          class="sc-bxivhb hQYITJ"
+          data-testid="title"
+        >
+          SPRING
+        </div>
+        <div
+          class="sc-ifAKCX jbyhsX"
+        >
+          SEE COLLECTION
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
