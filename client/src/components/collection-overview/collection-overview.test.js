@@ -44,4 +44,17 @@ describe('CollectionOverview component', () => {
     expect(screen.getByTestId('price')).toHaveTextContent('20 €');
     expect(screen.getByTestId('link')).toHaveTextContent('Sign in required');
   });
+
+  it('should render spinner component', () => {
+    render(
+      <Router history={history}>
+        <CollectionOverview />
+      </Router>,
+      {
+        initialState: { collection: { isFetching: true } },
+      }
+    );
+
+    expect(screen.getByTestId('spinner')).toBeInTheDocument();
+  });
 });
