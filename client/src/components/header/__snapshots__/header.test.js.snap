@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component should render Header component 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-jTzLTM jTGbTz"
+  >
+    <div
+      class="sc-fjdhpX cFtmev"
+    >
+      <a
+        class="sc-kAzzGY qPVRJ"
+        href="/"
+      >
+        <div
+          class="sc-kgoBCf dvjZwE"
+        >
+          4
+        </div>
+        <div
+          class="sc-chPdSV cgZKXE"
+        >
+          SEASONS
+        </div>
+      </a>
+    </div>
+    <div
+      class="sc-jzJRlG gBHJeD"
+    >
+      <a
+        class="sc-cSHVUG cNCaJc"
+        href="/collection"
+      >
+        COLLECTION
+      </a>
+      <a
+        class="sc-cSHVUG cNCaJc"
+        href="/contact"
+      >
+        CONTACT
+      </a>
+      <a
+        class="sc-cSHVUG cNCaJc"
+        href="/login"
+      >
+        SIGN IN
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
