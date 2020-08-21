@@ -40,9 +40,9 @@ const CheckoutPage = () => {
         <S.Text>You have no added items</S.Text>
       )}
       <S.TotalContainer>
-        <span>TOTAL : {cartTotal} €</span>
+        <span data-testid='cart-total'>TOTAL : {cartTotal} €</span>
       </S.TotalContainer>
-      <S.Warning>
+      <S.Warning data-testid='warning'>
         *Please use this test credit card for payments on this site*
         <br />
         4242 4242 4242 4242 - Exp: 01/21 - CVC: 543

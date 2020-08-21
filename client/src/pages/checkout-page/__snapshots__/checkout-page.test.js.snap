@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckoutPage component should render CheckoutPage component 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-gzVnrw eIByyL"
+  >
+    <div
+      class="sc-htoDjs kcQdPC"
+    >
+      <div
+        class="sc-dnqmqq eUgIDW"
+      >
+        <span>
+          Product
+        </span>
+      </div>
+      <div
+        class="sc-dnqmqq eUgIDW"
+      >
+        <span>
+          Description
+        </span>
+      </div>
+      <div
+        class="sc-dnqmqq eUgIDW"
+      >
+        <span>
+          Quantity
+        </span>
+      </div>
+      <div
+        class="sc-dnqmqq eUgIDW"
+      >
+        <span>
+          Price
+        </span>
+      </div>
+      <div
+        class="sc-dnqmqq eUgIDW"
+      >
+        <span>
+          Remove
+        </span>
+      </div>
+    </div>
+    <span
+      class="sc-gqjmRU MHWQq"
+    >
+      You have no added items
+    </span>
+    <div
+      class="sc-iwsKbI jpayIg"
+    >
+      <span
+        data-testid="cart-total"
+      >
+        TOTAL : 0 €
+      </span>
+    </div>
+    <div
+      class="sc-gZMcBi hiZTFl"
+      data-testid="warning"
+    >
+      *Please use this test credit card for payments on this site*
+      <br />
+      4242 4242 4242 4242 - Exp: 01/21 - CVC: 543
+    </div>
+    <button
+      class="StripeCheckout"
+      style="overflow: hidden; display: inline-block; border: 0px; padding: 1px; text-decoration: none; border-radius: 5px; box-shadow: 0 1px 0 rgba(0,0,0,0.2); cursor: pointer; visibility: visible; user-select: none;"
+    >
+      <span
+        style="font-family: \\"Helvetica Neue\\",Helvetica,Arial,sans-serif; font-size: 14px; position: relative; padding: 0px 12px; display: block; height: 30px; line-height: 30px; color: rgb(255, 255, 255); font-weight: bold; box-shadow: inset 0 1px 0 rgba(255,255,255,0.25); text-shadow: 0 -1px 0 rgba(0,0,0,0.25); border-radius: 4px;"
+      >
+        Pay Now
+      </span>
+    </button>
+  </div>
+</DocumentFragment>
+`;
