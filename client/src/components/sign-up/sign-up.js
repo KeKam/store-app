@@ -46,6 +46,7 @@ const SignUp = () => {
           onChange={handleOnChange}
           label='Display Name'
           required
+          data-testid='display-name'
         />
         <FormInput
           name='email'
@@ -54,6 +55,7 @@ const SignUp = () => {
           onChange={handleOnChange}
           label='Email'
           required
+          data-testid='email'
         />
         <FormInput
           name='password'
@@ -62,6 +64,7 @@ const SignUp = () => {
           onChange={handleOnChange}
           label='Password'
           required
+          data-testid='password'
         />
         <FormInput
           name='confirmPassword'
@@ -70,6 +73,7 @@ const SignUp = () => {
           onChange={handleOnChange}
           label='Confirm Password'
           required
+          data-testid='confirm-password'
         />
 
         <Button type='submit'> SIGN UP </Button>
