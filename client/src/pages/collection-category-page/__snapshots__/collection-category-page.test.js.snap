@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CollectionCategoryPage component should render CollectionCategoryPage component 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-gZMcBi esSNAH"
+  >
+    <h2
+      class="sc-gqjmRU kUdzW"
+    >
+      SPRING
+    </h2>
+    <div
+      class="sc-VigVT jzxwRK"
+    >
+      <div
+        class="sc-bwzfXH srITS"
+      >
+        <div
+          class="sc-htpNat dTlvyq"
+          data-testid="image"
+        />
+        <div
+          class="sc-bxivhb oDKzY"
+        >
+          <span
+            class="sc-EHOje ckFQmK"
+            data-testid="title"
+          >
+            Tulips
+          </span>
+          <span
+            class="sc-bZQynM bjXVPL"
+            data-testid="price"
+          >
+            20 €
+          </span>
+        </div>
+        <a
+          class="sc-gzVnrw jnQMmI"
+          data-testid="link"
+          href="/login"
+        >
+          <h2
+            class="sc-htoDjs bRjjzo"
+          >
+            Sign in required
+          </h2>
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
