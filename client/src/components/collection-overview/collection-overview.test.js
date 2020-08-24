@@ -11,10 +11,9 @@ const history = createMemoryHistory();
 describe('CollectionOverview component', () => {
   it('should render CollectionOverview component', () => {
     const mockState = {
-      categories: [
-        {
+      categories: {
+        spring: {
           id: 1,
-          title: 'SPRING',
           items: [
             {
               id: 1,
@@ -23,8 +22,10 @@ describe('CollectionOverview component', () => {
               price: 20,
             },
           ],
+          routeName: 'spring',
+          title: 'Spring',
         },
-      ],
+      },
       isFetching: false,
     };
 
