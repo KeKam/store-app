@@ -15,7 +15,7 @@ const CollectionPage = ({ match }) => {
   }, [dispatch]);
 
   return (
-    <S.Container>
+    <S.Container data-testid='container'>
       <Route exact path={match.path} component={CollectionOverview} />
       <Route
         path={`${match.path}/:categoryId`}
