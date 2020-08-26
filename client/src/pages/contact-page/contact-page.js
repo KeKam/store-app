@@ -63,6 +63,7 @@ const ContactPage = () => {
                   onChange={handleOnChange}
                   label='Name'
                   required
+                  data-testid='name-input'
                 />
                 <FormInput
                   name='email'
@@ -71,6 +72,7 @@ const ContactPage = () => {
                   onChange={handleOnChange}
                   label='Email'
                   required
+                  data-testid='email-input'
                 />
                 <FormInput
                   as='textarea'
@@ -81,6 +83,7 @@ const ContactPage = () => {
                   rows='5'
                   label='Description'
                   required
+                  data-testid='description-input'
                 />
 
                 <Button type='submit'> SEND </Button>

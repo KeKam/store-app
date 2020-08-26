@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactPage component should render ContactPage component 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bZQynM kzvvTl"
+  >
+    <div
+      class="sc-gzVnrw gytjGv"
+    >
+      <h2
+        class="sc-htoDjs GlcDy"
+      >
+        Need to contact us?
+      </h2>
+      <span>
+        Please use the form below
+      </span>
+      <p
+        class="sc-dnqmqq eLXxaK"
+      />
+      <form>
+        <div
+          class="sc-bdVaJa eEzrUY"
+        >
+          <input
+            class="sc-bwzfXH eKtSpl"
+            data-testid="name-input"
+            name="name"
+            required=""
+            type="text"
+            value=""
+          />
+          <label
+            class="sc-htpNat gLmdTI"
+            value=""
+          >
+            Name
+          </label>
+        </div>
+        <div
+          class="sc-bdVaJa eEzrUY"
+        >
+          <input
+            class="sc-bwzfXH eKtSpl"
+            data-testid="email-input"
+            name="email"
+            required=""
+            type="email"
+            value=""
+          />
+          <label
+            class="sc-htpNat gLmdTI"
+            value=""
+          >
+            Email
+          </label>
+        </div>
+        <div
+          class="sc-bdVaJa eEzrUY"
+        >
+          <textarea
+            class="sc-bwzfXH eKtSpl"
+            data-testid="description-input"
+            name="description"
+            required=""
+            rows="5"
+            type="text"
+          />
+          <label
+            class="sc-htpNat gLmdTI"
+            value=""
+          >
+            Description
+          </label>
+        </div>
+        <button
+          class="sc-bxivhb jzXiqt"
+          type="submit"
+        >
+           SEND 
+        </button>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;
