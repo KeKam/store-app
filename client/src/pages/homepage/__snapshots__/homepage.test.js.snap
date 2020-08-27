@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage component should render Homepage component 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bZQynM bsmBBS"
+  >
+    <div
+      class="sc-EHOje fpJsVf"
+    >
+      <div
+        class="sc-bdVaJa hJLFdt"
+        data-testid="item"
+      >
+        <div
+          class="sc-bwzfXH cWENaq"
+          data-testid="image"
+        />
+        <div
+          class="sc-htpNat fMwJqu"
+        >
+          <div
+            class="sc-bxivhb hQYITJ"
+            data-testid="title"
+          >
+            SPRING
+          </div>
+          <div
+            class="sc-ifAKCX jbyhsX"
+          >
+            SEE COLLECTION
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-bdVaJa hJLFdt"
+        data-testid="item"
+      >
+        <div
+          class="sc-bwzfXH dluYIx"
+          data-testid="image"
+        />
+        <div
+          class="sc-htpNat fMwJqu"
+        >
+          <div
+            class="sc-bxivhb hQYITJ"
+            data-testid="title"
+          >
+            SUMMER
+          </div>
+          <div
+            class="sc-ifAKCX jbyhsX"
+          >
+            SEE COLLECTION
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-bdVaJa hJLFdt"
+        data-testid="item"
+      >
+        <div
+          class="sc-bwzfXH bkerVt"
+          data-testid="image"
+        />
+        <div
+          class="sc-htpNat fMwJqu"
+        >
+          <div
+            class="sc-bxivhb hQYITJ"
+            data-testid="title"
+          >
+            AUTUMN
+          </div>
+          <div
+            class="sc-ifAKCX jbyhsX"
+          >
+            SEE COLLECTION
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-bdVaJa hJLFdt"
+        data-testid="item"
+      >
+        <div
+          class="sc-bwzfXH plgPp"
+          data-testid="image"
+        />
+        <div
+          class="sc-htpNat fMwJqu"
+        >
+          <div
+            class="sc-bxivhb hQYITJ"
+            data-testid="title"
+          >
+            WINTER
+          </div>
+          <div
+            class="sc-ifAKCX jbyhsX"
+          >
+            SEE COLLECTION
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
