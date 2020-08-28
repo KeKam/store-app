@@ -1,7 +1,7 @@
 import CollectionActionTypes from './collection.types';
 import collectionReducer from './collection.reducer';
 
-const mockState = {
+const DEFAULT_STATE = {
   categories: null,
   isFetching: false,
   error: undefined,
@@ -9,12 +9,12 @@ const mockState = {
 
 describe('collectionReducer', () => {
   it('should return default state', () => {
-    expect(collectionReducer(undefined, {})).toEqual(mockState);
+    expect(collectionReducer(undefined, {})).toEqual(DEFAULT_STATE);
   });
 
   it('should set isFetching to true if startFetchCollection', () => {
     expect(
-      collectionReducer(mockState, {
+      collectionReducer(DEFAULT_STATE, {
         type: CollectionActionTypes.START_FETCH_COLLECTION,
       }).isFetching
     ).toBe(true);
@@ -24,19 +24,19 @@ describe('collectionReducer', () => {
     const mockItems = [{ id: 1 }, { id: 2 }];
 
     expect(
-      collectionReducer(mockState, {
+      collectionReducer(DEFAULT_STATE, {
         type: CollectionActionTypes.FETCH_COLLECTION_SUCCESS,
         payload: mockItems,
       })
-    ).toEqual({ ...mockState, isFetching: false, categories: mockItems });
+    ).toEqual({ ...DEFAULT_STATE, isFetching: false, categories: mockItems });
   });
 
   it('should set isFetching to false and error to payload if fetchCollectionFailure', () => {
     expect(
-      collectionReducer(mockState, {
+      collectionReducer(DEFAULT_STATE, {
         type: CollectionActionTypes.FETCH_COLLECTION_FAILURE,
         payload: 'error',
       })
-    ).toEqual({ ...mockState, isFetching: false, error: 'error' });
+    ).toEqual({ ...DEFAULT_STATE, isFetching: false, error: 'error' });
   });
 });
