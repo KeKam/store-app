@@ -13,14 +13,26 @@ describe('Collection actions', () => {
   });
 
   it('should create fetchCollectionSuccess action', () => {
-    expect(fetchCollectionSuccess().type).toEqual(
-      CollectionActionTypes.FETCH_COLLECTION_SUCCESS
-    );
+    const mockCollectionMap = {
+      spring: {
+        id: 1,
+      },
+    };
+
+    const action = fetchCollectionSuccess(mockCollectionMap);
+
+    expect(action.type).toEqual(CollectionActionTypes.FETCH_COLLECTION_SUCCESS);
+    expect(action.payload).toEqual(mockCollectionMap);
   });
 
   it('should create fetchCollectionFailure action', () => {
-    expect(fetchCollectionFailure().type).toEqual(
-      CollectionActionTypes.FETCH_COLLECTION_FAILURE
-    );
+    const mockError = {
+      error: 'errored',
+    };
+
+    const action = fetchCollectionFailure(mockError);
+
+    expect(action.type).toEqual(CollectionActionTypes.FETCH_COLLECTION_FAILURE);
+    expect(action.payload).toEqual(mockError);
   });
 });

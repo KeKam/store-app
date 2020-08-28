@@ -9,15 +9,15 @@ import {
 } from './cart.actions';
 
 describe('Cart actions', () => {
-  let mockItem = {
-    id: 1,
-  };
-
   it('should create toggleCart action', () => {
     expect(toggleCart().type).toEqual(CartActionTypes.TOGGLE_CART);
   });
 
   it('should create addToCart action', () => {
+    let mockItem = {
+      id: 1,
+    };
+
     const action = addToCart(mockItem);
 
     expect(action.type).toEqual(CartActionTypes.ADD_TO_CART);
@@ -25,6 +25,10 @@ describe('Cart actions', () => {
   });
 
   it('should create removeFromCart action', () => {
+    let mockItem = {
+      id: 1,
+    };
+
     const action = removeFromCart(mockItem);
 
     expect(action.type).toEqual(CartActionTypes.REMOVE_FROM_CART);
@@ -32,6 +36,10 @@ describe('Cart actions', () => {
   });
 
   it('should create removeItem action', () => {
+    let mockItem = {
+      id: 1,
+    };
+
     const action = removeItem(mockItem);
 
     expect(action.type).toEqual(CartActionTypes.REMOVE_ITEM);
