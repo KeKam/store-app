@@ -8,7 +8,7 @@ import {
   resetFormAfterSuccess,
 } from './form.actions';
 
-const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+export const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
 export function* sendForm({ payload: { name, email, description } }) {
   try {
