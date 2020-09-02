@@ -126,14 +126,19 @@ describe('User sagas', () => {
   });
 
   describe('on signUp saga', () => {
+    const mockEmail = 'testuser@gmail.com';
+    const mockPassword = 'test123';
+    const mockDisplayName = 'Tester';
+
     const mockAction = {
       payload: {
-        email: 'testuser@gmail.com',
-        password: 'test123',
-        displayName: 'Tester',
+        email: mockEmail,
+        password: mockPassword,
+        displayName: mockDisplayName,
       },
     };
     const generator = signUp(mockAction);
+
     it('should call auth.createUserWithEmailAndPassword', () => {
       const createUserWithEmailAndPassword = jest.spyOn(
         auth,
@@ -142,7 +147,34 @@ describe('User sagas', () => {
 
       generator.next();
 
-      expect(createUserWithEmailAndPassword).toHaveBeenCalled();
+      expect(createUserWithEmailAndPassword).toHaveBeenCalledWith(
+        mockEmail,
+        mockPassword
+      );
+    });
+
+    it('should call signUpSuccess', () => {
+      const mockUser = {
+        user: {
+          email: mockEmail,
+        },
+        additionalData: {
+          displayName: mockDisplayName,
+        },
+      };
+
+      expect(generator.next(mockUser).value).toEqual(
+        put(signUpSuccess(mockUser))
+      );
+    });
+
+    it('should call signUpFailure on error', () => {
+      const newGenerator = signUp(mockAction);
+      newGenerator.next();
+
+      expect(newGenerator.throw('error').value).toEqual(
+        put(signUpFailure('error'))
+      );
     });
   });
 
@@ -196,17 +228,26 @@ describe('User sagas', () => {
   });
 
   describe('on getSnapshotFromUserAuth saga', () => {
-    it('get snapshot from userAuth', () => {
-      const mockUserAuth = {};
-      const mockAdditionalData = {};
+    const mockUserAuth = {};
+    const mockAdditionalData = {};
 
-      const generator = getSnapshotFromUserAuth(
+    const generator = getSnapshotFromUserAuth(mockUserAuth, mockAdditionalData);
+
+    it('get snapshot from userAuth', () => {
+      expect(generator.next().value).toEqual(
+        call(createUserProfileDocument, mockUserAuth, mockAdditionalData)
+      );
+    });
+
+    it('should call signInFailure on error', () => {
+      const newGenerator = getSnapshotFromUserAuth(
         mockUserAuth,
         mockAdditionalData
       );
+      newGenerator.next();
 
-      expect(generator.next().value).toEqual(
-        call(createUserProfileDocument, mockUserAuth, mockAdditionalData)
+      expect(newGenerator.throw('error').value).toEqual(
+        put(signInFailure('error'))
       );
     });
   });
