@@ -8,11 +8,15 @@ import { selectCartItems, selectCartHidden } from './cart.selectors';
 import { clearCart, setCartFromFirebase, toggleCart } from './cart.actions';
 
 export function* clearCartOnSignOut() {
-  const hidden = yield select(selectCartHidden);
-  yield put(clearCart());
+  try {
+    const hidden = yield select(selectCartHidden);
+    yield put(clearCart());
 
-  if (!hidden) {
-    yield put(toggleCart());
+    if (!hidden) {
+      yield put(toggleCart());
+    }
+  } catch (error) {
+    console.log(error);
   }
 }
 
@@ -31,9 +35,13 @@ export function* updateCartInFirebase() {
 }
 
 export function* checkCartFromFirebase({ payload: user }) {
-  const cartRef = yield getCurrentUserCart(user.id);
-  const cartSnapshot = yield cartRef.get();
-  yield put(setCartFromFirebase(cartSnapshot.data().cartItems));
+  try {
+    const cartRef = yield getCurrentUserCart(user.id);
+    const cartSnapshot = yield cartRef.get();
+    yield put(setCartFromFirebase(cartSnapshot.data().cartItems));
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 export function* onSignInSuccess() {
