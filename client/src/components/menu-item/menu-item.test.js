@@ -10,16 +10,12 @@ import MenuItem from './menu-item';
 const history = createMemoryHistory();
 
 describe('MenuItem component', () => {
-  let mockItem;
-
-  beforeEach(() => {
-    mockItem = {
-      title: 'SUMMER',
-      imageUrl: 'www.testImage.com',
-      id: 1,
-      linkUrl: 'collection/summer',
-    };
-  });
+  const mockItem = {
+    title: 'SUMMER',
+    imageUrl: 'www.testImage.com',
+    id: 1,
+    linkUrl: 'collection/summer',
+  };
 
   it('should render MenuItem component', () => {
     const { asFragment } = render(
@@ -30,8 +26,8 @@ describe('MenuItem component', () => {
 
     expect(asFragment()).toMatchSnapshot();
     expect(screen.getByTestId('image')).toBeInTheDocument();
-    expect(screen.getByTestId('title')).toHaveTextContent(/SUMMER/);
-    expect(screen.getByText(/SEE COLLECTION/)).toBeInTheDocument();
+    expect(screen.getByTestId('title')).toHaveTextContent('SUMMER');
+    expect(screen.getByText('SEE COLLECTION')).toBeInTheDocument();
   });
 
   it('should trigger history push on click', () => {

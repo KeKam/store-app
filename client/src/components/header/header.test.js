@@ -11,16 +11,14 @@ import Header from './header';
 const history = createMemoryHistory();
 
 describe('Header component', () => {
-  let mockState;
+  const mockState = {
+    currentUser: {
+      email: 'testUser@gmail.com',
+      password: 'testUser123',
+    },
+  };
 
   beforeEach(() => {
-    mockState = {
-      currentUser: {
-        email: 'testUser@gmail.com',
-        password: 'testUser123',
-      },
-    };
-
     history.push = jest.fn();
   });
 

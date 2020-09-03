@@ -9,18 +9,14 @@ import CollectionCategoryPage from './collection-category-page';
 const history = createMemoryHistory();
 
 describe('CollectionCategoryPage component', () => {
-  let mockMatch;
-
-  beforeEach(() => {
-    mockMatch = {
-      isExact: true,
-      params: {
-        categoryId: 'spring',
-      },
-      path: '/collection/:categoryId',
-      url: '/collection/spring',
-    };
-  });
+  const mockMatch = {
+    isExact: true,
+    params: {
+      categoryId: 'spring',
+    },
+    path: '/collection/:categoryId',
+    url: '/collection/spring',
+  };
 
   it('should render CollectionCategoryPage component', () => {
     const mockState = {

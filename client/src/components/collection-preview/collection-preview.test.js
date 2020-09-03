@@ -10,23 +10,19 @@ import CollectionPreview from './collection-preview';
 const history = createMemoryHistory({ initialEntries: ['/collection'] });
 
 describe('CollectionPreview component', () => {
-  let mockCollectionProps;
-
-  beforeEach(() => {
-    mockCollectionProps = {
-      id: 1,
-      title: 'SPRING',
-      items: [
-        {
-          id: 1,
-          imageUrl: 'www.testImage.com',
-          name: 'Tulips',
-          price: 20,
-        },
-      ],
-      routeName: 'spring',
-    };
-  });
+  const mockCollectionProps = {
+    id: 1,
+    title: 'SPRING',
+    items: [
+      {
+        id: 1,
+        imageUrl: 'www.testImage.com',
+        name: 'Tulips',
+        price: 20,
+      },
+    ],
+    routeName: 'spring',
+  };
 
   it('should render CollectionPreview component', () => {
     const { asFragment } = render(

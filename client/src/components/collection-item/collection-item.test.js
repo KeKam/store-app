@@ -11,23 +11,18 @@ import CollectionItem from '../collection-item/collection-item';
 const history = createMemoryHistory();
 
 describe('CollectionItem component', () => {
-  let mockItem;
-  let mockState;
+  const mockItem = {
+    name: 'Winter falls',
+    imageUrl: 'www.testImage.com',
+    price: 100,
+  };
 
-  beforeEach(() => {
-    mockItem = {
-      name: 'Winter falls',
-      imageUrl: 'www.testImage.com',
-      price: 100,
-    };
-
-    mockState = {
-      currentUser: {
-        email: 'testUser@gmail.com',
-        password: 'testUser123',
-      },
-    };
-  });
+  const mockState = {
+    currentUser: {
+      email: 'testUser@gmail.com',
+      password: 'testUser123',
+    },
+  };
 
   it('should render CollectionItem component', () => {
     const history = createMemoryHistory();

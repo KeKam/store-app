@@ -11,23 +11,18 @@ import {
 import CheckoutItem from './checkout-item';
 
 describe('CheckoutItem component', () => {
-  let mockCartItem;
-  let mockState;
-
-  beforeEach(() => {
-    mockState = {
-      cartItems: [
-        {
-          id: 1,
-          name: 'Winter falls',
-          imageUrl: 'www.testImage.com',
-          price: 100,
-          quantity: 3,
-        },
-      ],
-    };
-    mockCartItem = mockState.cartItems[0];
-  });
+  const mockState = {
+    cartItems: [
+      {
+        id: 1,
+        name: 'Winter falls',
+        imageUrl: 'www.testImage.com',
+        price: 100,
+        quantity: 3,
+      },
+    ],
+  };
+  const mockCartItem = mockState.cartItems[0];
 
   it('should render CheckoutItem component', () => {
     const { asFragment } = render(<CheckoutItem cartItem={mockCartItem} />);

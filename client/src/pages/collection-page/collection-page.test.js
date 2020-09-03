@@ -13,38 +13,33 @@ import CollectionPage from './collection-page';
 const history = createMemoryHistory();
 
 describe('CollectionPage component', () => {
-  let mockMatch;
-  let mockState;
+  const mockMatch = {
+    isExact: true,
+    params: {
+      categoryId: 'spring',
+    },
+    path: '/collection',
+    url: '/collection',
+  };
 
-  beforeEach(() => {
-    mockMatch = {
-      isExact: true,
-      params: {
-        categoryId: 'spring',
+  const mockState = {
+    categories: {
+      spring: {
+        id: 1,
+        items: [
+          {
+            id: 1,
+            imageUrl: 'www.testImage.com',
+            name: 'Tulips',
+            price: 20,
+          },
+        ],
+        routeName: 'spring',
+        title: 'Spring',
       },
-      path: '/collection',
-      url: '/collection',
-    };
-
-    mockState = {
-      categories: {
-        spring: {
-          id: 1,
-          items: [
-            {
-              id: 1,
-              imageUrl: 'www.testImage.com',
-              name: 'Tulips',
-              price: 20,
-            },
-          ],
-          routeName: 'spring',
-          title: 'Spring',
-        },
-      },
-      isFetching: false,
-    };
-  });
+    },
+    isFetching: false,
+  };
 
   it('should render CollectionPage component', () => {
     const { asFragment } = render(

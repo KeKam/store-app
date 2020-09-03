@@ -7,17 +7,13 @@ import { render, screen } from '../../test-utils';
 import CartItem from './cart-item';
 
 describe('CartItem component', () => {
-  let mockItem;
-
-  beforeEach(() => {
-    mockItem = {
-      id: 1,
-      name: 'Winter falls',
-      imageUrl: 'www.testImage.com',
-      price: 100,
-      quantity: 2,
-    };
-  });
+  const mockItem = {
+    id: 1,
+    name: 'Winter falls',
+    imageUrl: 'www.testImage.com',
+    price: 100,
+    quantity: 2,
+  };
 
   it('should render CartItem component', () => {
     const { asFragment } = render(<CartItem item={mockItem} />);
