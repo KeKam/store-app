@@ -6,4 +6,6 @@ Frontend made with React using Redux for state management.
 
 Backend consist of Node/Express for server handling and Firebase for database and authentication.
 
+Testing is done using Jest and React Testing Library.
+
 [Live version](https://four-seasons.herokuapp.com/)
